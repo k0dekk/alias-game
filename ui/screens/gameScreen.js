@@ -77,6 +77,8 @@ export function showGameScreen(state, onRoundEnd) {
 
   on("#btnWrong", "click", () => {
     markWord(state, false);
+    roundScore--;
+    $("#roundScore").textContent = roundScore;
     addToList(state.currentWord, false);
     updateWord();
   });

@@ -33,7 +33,11 @@ export function nextWord(state) {
 
 export function markWord(state, guessed) {
   state.roundWords.push({ word: state.currentWord, guessed });
-  if (guessed) getCurrentTeam(state).score++;
+  if (guessed) {
+    getCurrentTeam(state).score++;
+  } else {
+    getCurrentTeam(state).score--;
+  }
 }
 
 export function endRound(state) {

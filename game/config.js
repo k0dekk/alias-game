@@ -1,5 +1,3 @@
-// game/config.js
-
 export const DIFFICULTIES = {
   easy:   { label: "Легкий",   time: 60, wordSet: "easy" },
   medium: { label: "Середній", time: 60, wordSet: "medium" },
