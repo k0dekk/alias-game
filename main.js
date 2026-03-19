@@ -1,3 +1,4 @@
+import "./main.css";
 import { showStartScreen }                          from "./ui/screens/startScreen.js";
 import { showReadyScreen, showGameScreen, stopTimer } from "./ui/screens/gameScreen.js";
 import { showRoundEndScreen, showGameOverScreen }    from "./ui/screens/resultScreen.js";
