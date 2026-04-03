@@ -21,9 +21,20 @@ export class BiDirectionalPriorityQueue {
       const target = this.items[targetIdx];
 
       switch (type) {
-        case 'highest': if (current.priority > target.priority) targetIdx = i; break;
-        case 'lowest':  if (current.priority < target.priority) targetIdx = i; break;
+        case 'highest':
+          if (current.priority > target.priority ||
+            (current.priority === target.priority && current.age < target.age))
+            targetIdx = i;
+        break;
+
+        case 'lowest':
+           if (current.priority < target.priority ||
+            (current.priority === target.priority && current.age < target.age))
+            targetIdx = i;
+        break;
+
         case 'oldest':  if (current.age < target.age) targetIdx = i; break;
+        
         case 'newest':  if (current.age > target.age) targetIdx = i; break;
       }
     }
