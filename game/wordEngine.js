@@ -1,14 +1,5 @@
-import words, { getAllWords } from "../words/uk.js";
-
-export function getWordPool(wordSet) {
-  switch (wordSet) {
-    case "easy":   return [...words.easy];
-    case "medium": return [...words.medium];
-    case "hard":   return [...words.hard];
-    case "all":    return getAllWords();
-    default:       return getAllWords();
-  }
-}
+import wordsData from "../words/uk.json";
+import { BiDirectionalPriorityQueue } from "../utils/BiDIrectionalPriorityQueue.js";
 
 export function shuffle(arr) {
   const a = [...arr];
@@ -20,5 +11,22 @@ export function shuffle(arr) {
 }
 
 export function createWordQueue(wordSet) {
-  return shuffle(getWordPool(wordSet));
+  const queue = new BiDirectionalPriorityQueue();
+
+  let filtered;
+  if (wordSet === "all") {
+    filtered = wordsData;
+  } else {
+    const difficultyMap = { easy: 1, medium: 2, hard: 3 };
+    filtered = wordsData.filter(w => w.level === difficultyMap[wordSet]);
+  }
+
+  const shuffled = shuffle(filtered);
+
+  shuffled.forEach(w => {
+    console.log(w);
+    queue.enqueue(w.text, w.level);
+  });
+
+  return queue;
 }

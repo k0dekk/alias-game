@@ -23,11 +23,12 @@ export function getCurrentTeam(state) {
 }
 
 export function nextWord(state) {
-  if (state.wordIndex >= state.wordQueue.length) {
+  if (state.wordQueue.isEmpty()) {
     state.wordQueue = createWordQueue(DIFFICULTIES[state.difficulty].wordSet);
-    state.wordIndex = 0;
   }
-  state.currentWord = state.wordQueue[state.wordIndex++];
+  
+  state.currentWord = state.wordQueue.dequeue('oldest');
+  
   return state.currentWord;
 }
 
