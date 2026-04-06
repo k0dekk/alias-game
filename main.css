@@ -37,6 +37,13 @@ button:hover {
 #btnWrong {
   background-color: #f7c5c5;
   border-color: #d9534f;
+  display: block;
+  margin-left: auto;
+}
+
+.btn-row {
+  display: flex;
+  justify-content: space-between;
 }
 
 .diff-btn.active {

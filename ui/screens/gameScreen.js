@@ -43,9 +43,11 @@ export function showGameScreen(state, onRoundEnd) {
       <hr>
       <h1 id="wordText">${word}</h1>
       <hr>
+      <div class="btn-row">
       <button id="btnCorrect">✓ Вгадали!</button>
       &nbsp;
       <button id="btnWrong">✗ Пропустити</button>
+      </div>
       <hr>
       <div id="guessedList"></div>
     </div>
