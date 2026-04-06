@@ -13,6 +13,14 @@ export class BiDirectionalPriorityQueue {
   }
 
   _getTargetIndex(type) {
+
+    const validTypes = ['highest', 'lowest', 'oldest', 'newest'];
+      if (!validTypes.includes(type)) {
+        console.warn(`not a valid type"${type}"`);
+        return -1;
+      }
+
+  if (this.items.length === 0) return -1;
     if (this.items.length === 0) return -1;
     let targetIdx = 0;
 
