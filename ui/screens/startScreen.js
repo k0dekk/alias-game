@@ -16,9 +16,9 @@ export function showStartScreen(onStart) {
 
         <h3>Складність:</h3>
         ${Object.entries(DIFFICULTIES).map(([key, d]) => `
-          <button class="diff-btn ${key === selectedDifficulty ? "[активний]" : ""}"
+          <button class="diff-btn ${key === selectedDifficulty ? "active" : ""}"
                   data-key="${key}">
-            ${d.label} (${d.time}с)
+            ${d.label}
           </button>
         `).join(" ")}
 
