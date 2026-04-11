@@ -5,6 +5,9 @@ export class PriorityWordQueue {
   }
 
   enqueue(item, priority) {
+    if (typeof priority !== 'number') {
+      throw new Error('Priority must be a number')
+    }
     this.items.push({
       data: item,
       priority: priority,
@@ -13,14 +16,11 @@ export class PriorityWordQueue {
   }
 
   _getTargetIndex(type) {
-
     const validTypes = ['highest', 'lowest', 'oldest', 'newest'];
       if (!validTypes.includes(type)) {
-        console.warn(`not a valid type"${type}"`);
-        return -1;
+        throw new Error('invalid type');
       }
 
-  if (this.items.length === 0) return -1;
     if (this.items.length === 0) return -1;
     let targetIdx = 0;
 
