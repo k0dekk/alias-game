@@ -1,5 +1,5 @@
 import wordsData from "../words/uk.json";
-import { BiDirectionalPriorityQueue } from "../utils/BiDIrectionalPriorityQueue.js";
+import { PriorityWordQueue } from "../utils/PriorityWordQueue.js";
 
 export function shuffle(arr) {
   const a = [...arr];
@@ -11,22 +11,14 @@ export function shuffle(arr) {
 }
 
 export function createWordQueue(wordSet) {
-  const queue = new BiDirectionalPriorityQueue();
+  const queue = new PriorityWordQueue();
+  const difficultyMap = { easy: 1, medium: 2, hard: 3 };
 
-  let filtered;
-  if (wordSet === "all") {
-    filtered = wordsData;
-  } else {
-    const difficultyMap = { easy: 1, medium: 2, hard: 3 };
-    filtered = wordsData.filter(w => w.level === difficultyMap[wordSet]);
-  }
+  const filtered = wordSet === "all"
+    ? wordsData
+    : wordsData.filter(w => w.level === difficultyMap[wordSet]);
 
-  const shuffled = shuffle(filtered);
-
-  shuffled.forEach(w => {
-    console.log(w);
-    queue.enqueue(w.text, w.level);
-  });
+  shuffle(filtered).forEach(w => queue.enqueue(w.text, w.level));
 
   return queue;
 }
