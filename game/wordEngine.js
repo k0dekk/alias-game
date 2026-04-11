@@ -18,7 +18,7 @@ export function createWordQueue(wordSet) {
     ? wordsData
     : wordsData.filter(w => w.level === difficultyMap[wordSet]);
 
-  shuffle(filtered).forEach(w => queue.enqueue(w.text, w.level));
+  shuffle(filtered).forEach(w => queue.enqueue({ text: w.text, level: w.level }, w.level));
 
   return queue;
 }
