@@ -1,4 +1,4 @@
-export class BiDirectionalPriorityQueue {
+export class PriorityWordQueue {
   constructor() {
     this.items = [];
     this.counter = 0;
