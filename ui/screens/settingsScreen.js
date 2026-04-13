@@ -36,6 +36,17 @@ export function showSettingsScreen(onStart) {
         </div>
 
         <hr>
+        <h3>Категорії:</h3>
+        <select id="categorySelect" disabled>
+        </select>
+
+        <h3>Бали для перемоги:</h3>
+        <input id="targetScoreInput" type="number" min="1" value="${targetScore}" disabled />
+
+        <h3>Час раунду:</h3>
+        <input id="roundTimeInput" type="number" min="10" value="${roundTime}" disabled />
+
+        <hr>
         <button id="beginGameBtn">Почати</button>
       </div>
     `);
