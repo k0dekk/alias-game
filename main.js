@@ -1,33 +1,28 @@
 import "./main.css";
 import { showStartScreen }                          from "./ui/screens/startScreen.js";
-import { showReadyScreen, showGameScreen, stopTimer } from "./ui/screens/gameScreen.js";
-import { showRoundEndScreen, showGameOverScreen }    from "./ui/screens/resultScreen.js";
-import { createGame }                                from "./game/gameState.js";
+import { showSettingsScreen }                       from "./ui/screens/settingsScreen.js";
+import { showGameScreen, stopTimer }                from "./ui/screens/gameScreen.js";
+import { showGameOverScreen }                       from "./ui/screens/resultScreen.js";
+import { createGame }                               from "./game/gameState.js";
 
 let state = null;
 
 function startGame({ teams, difficulty }) {
   state = createGame({ teams, difficulty });
-  goToReady();
-}
-
-function goToReady() {
   stopTimer();
-  showReadyScreen(state, () => {
-    showGameScreen(state, onRoundEnd);
-  });
+  showGameScreen(state, onRoundEnd);
 }
 
 function onRoundEnd(result) {
   if (state.phase === "gameOver") {
-    showRoundEndScreen(state, result, () => showGameOverScreen(state, restart));
+    showGameOverScreen(state, restart);
   } else {
-    showRoundEndScreen(state, result, goToReady);
+    showGameScreen(state, onRoundEnd);
   }
 }
 
 function restart() {
-  showStartScreen(startGame);
+  showStartScreen(() => showSettingsScreen(startGame));
 }
 
-showStartScreen(startGame);
+showStartScreen(() => showSettingsScreen(startGame));
