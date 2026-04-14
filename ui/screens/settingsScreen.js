@@ -1,5 +1,5 @@
 import { render, $, $$, on, fadeIn } from "../render.js";
-import { DIFFICULTIES, MIN_TEAMS, MAX_TEAMS } from "../../game/config.js";
+import { DIFFICULTIES, CATEGORIES, MIN_TEAMS, MAX_TEAMS } from "../../game/config.js";
 
 export function showSettingsScreen(onStart) {
   let selectedDifficulty = "medium";
@@ -9,9 +9,17 @@ export function showSettingsScreen(onStart) {
   let targetScore = 30;
   let roundTime = 60;
 
+  let selectedCategories = ["all"];
+  let tempSelectedCategories = [];
+
   renderPage();
 
   function renderPage() {
+    const selectedLabels = CATEGORIES
+      .filter(c => selectedCategories.includes(c.id))
+      .map(c => c.label)
+      .join(", ");
+    
     render(`
       <div>
         <h1>Налаштування гри</h1>
@@ -37,8 +45,7 @@ export function showSettingsScreen(onStart) {
 
         <hr>
         <h3>Категорії:</h3>
-        <select id="categorySelect" disabled>
-        </select>
+        <button id="openCategoriesBtn">${selectedLabels || "Категорії"}</button>
 
         <h3>Бали для перемоги:</h3>
         <input id="targetScoreInput" type="number" min="1" value="${targetScore}" disabled />
@@ -94,6 +101,12 @@ export function showSettingsScreen(onStart) {
       if (e.target.classList.contains("team-input")) {
         teamNames[+e.target.dataset.idx] = e.target.value;
       }
+    });
+
+    on("#openCategoriesBtn", "click", () => {
+      isModalOpen = true;
+      tempSelectedCategories = [...selectedCategories]; 
+      renderPage();
     });
 
     on("#beginGameBtn", "click", () => {
