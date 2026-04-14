@@ -5,6 +5,12 @@ export const DIFFICULTIES = {
   mixed:  { label: "Змішаний", time: 60, wordSet: "all" },
 };
 
+export const CATEGORIES = [
+  { id: "cat_1", label: "Категорія 1" },
+  { id: "cat_2", label: "Категорія 2" },
+  { id: "cat_3", label: "Категорія 3" },
+];
+
 export const DEFAULT_ROUNDS = 3;
 export const MIN_TEAMS = 2;
 export const MAX_TEAMS = 6;
