@@ -11,6 +11,7 @@ export function showSettingsScreen(onStart) {
 
   let selectedCategories = ["all"];
   let tempSelectedCategories = [];
+  let isModalOpen = false;
 
   renderPage();
 
@@ -56,6 +57,26 @@ export function showSettingsScreen(onStart) {
         <hr>
         <button id="beginGameBtn">Почати</button>
       </div>
+
+      ${isModalOpen ? `
+        <div class="modal-overlay" id="catModal">
+          <div class="modal-content">
+            <h2>Обери категорії</h2>
+            <div class="categories-grid">
+              ${CATEGORIES.map(c => `
+                <div class="cat-box ${tempSelectedCategories.includes(c.id) ? "selected" : ""}" data-id="${c.id}">
+                  ${c.label}
+                </div>
+              `).join("")}
+            </div>
+            <div class="modal-actions">
+              <button id="cancelCatBtn">Скасувати</button>
+              <button id="confirmCatBtn">Обрати</button>
+            </div>
+          </div>
+        </div>
+      ` : ""}
+      
     `);
 
     fadeIn();
@@ -108,6 +129,31 @@ export function showSettingsScreen(onStart) {
       tempSelectedCategories = [...selectedCategories]; 
       renderPage();
     });
+
+    if (isModalOpen) {
+      $$(".cat-box").forEach(box => {
+        on(box, "click", () => {
+          const id = box.dataset.id;
+          if (tempSelectedCategories.includes(id)) {
+            tempSelectedCategories = tempSelectedCategories.filter(cat => cat !== id);
+          } else {
+            tempSelectedCategories.push(id);
+          }
+          renderPage();
+        });
+      });
+
+      on("#cancelCatBtn", "click", () => {
+        isModalOpen = false;
+        renderPage();
+      });
+
+      on("#confirmCatBtn", "click", () => {
+        selectedCategories = [...tempSelectedCategories];
+        isModalOpen = false;
+        renderPage();
+      });
+    }
 
     on("#beginGameBtn", "click", () => {
       const names = Array.from({ length: teamCount }, (_, i) =>
