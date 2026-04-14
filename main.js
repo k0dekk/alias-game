@@ -1,4 +1,4 @@
-import "./main.css";
+import "./styles/main.css";
 import { showStartScreen }                          from "./ui/screens/startScreen.js";
 import { showSettingsScreen }                       from "./ui/screens/settingsScreen.js";
 import { showGameScreen, stopTimer }                from "./ui/screens/gameScreen.js";
