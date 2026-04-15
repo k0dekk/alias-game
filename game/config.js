@@ -6,10 +6,19 @@ export const DIFFICULTIES = {
 };
 
 export const CATEGORIES = [
-  { id: "cat_1", label: "Категорія 1" },
-  { id: "cat_2", label: "Категорія 2" },
-  { id: "cat_3", label: "Категорія 3" },
+  { id: "animals", label: "Тварини" },
+  { id: "food", label: "Їжа" },
+  { id: "home", label: "Дім" },
+  { id: "nature", label: "Природа" },
+  { id: "places", label: "Місця" },
+  { id: "professions", label: "Професії" },
+  { id: "things_and_devices", label: "Речі та пристрої" },
+  { id: "events", label: "Події" },
+  { id: "abstractions", label: "Абстракції" },
+  { id: "science", label: "Наука" },
+  { id: "society", label: "Суспільство" },
 ];
+
 
 export const DEFAULT_ROUNDS = 3;
 export const MIN_TEAMS = 2;
