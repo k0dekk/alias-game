@@ -1,16 +1,20 @@
-import { DIFFICULTIES, DEFAULT_ROUNDS } from "./config.js";
+import { DIFFICULTIES, CATEGORIES, DEFAULT_ROUNDS } from "./config.js";
 import { createWordQueue } from "./wordEngine.js";
 
-export function createGame({ teams, difficulty, rounds = DEFAULT_ROUNDS }) {
+export function createGame({ teams, difficulty, selectedCategories = [], rounds = DEFAULT_ROUNDS }) {
   const cfg = DIFFICULTIES[difficulty];
+  const categoriesToUse = selectedCategories.length > 0
+   ? selectedCategories
+   : CATEGORIES.map(c => c.id);
 
   return {
     teams:            teams.map((name, i) => ({ id: i, name, score: 0 })),
     difficulty,
+    selectedCategories: categoriesToUse,
     rounds,
     totalRounds:      rounds,
     currentTeamIndex: 0,
-    wordQueue:        createWordQueue(cfg.wordSet),
+    wordQueue:        createWordQueue(cfg.wordSet, categoriesToUse),
     phase:            "ready",
     currentWord:      null,
     lastGuessed:      null,
@@ -24,7 +28,10 @@ export function getCurrentTeam(state) {
 
 export function nextWord(state) {
   if (state.wordQueue.isEmpty()) {
-    state.wordQueue = createWordQueue(DIFFICULTIES[state.difficulty].wordSet);
+    state.wordQueue = createWordQueue(
+      DIFFICULTIES[state.difficulty].wordSet,
+      state.selectedCategories
+    );
   }
 
   if (state.difficulty === "mixed") {
