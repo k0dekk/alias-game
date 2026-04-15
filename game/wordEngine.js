@@ -22,7 +22,9 @@ export function createWordQueue(wordSet, selectedCategories) {
     ? difficultyFiltered.filter(w => selectedCategories.includes(w.category))
     : difficultyFiltered;
     
-  shuffle(filtered).forEach(w => queue.enqueue({ text: w.text, level: w.level }, w.level));
+  shuffle(categoryFiltered).forEach(w => 
+  queue.enqueue(w, w.level)
+  );
 
   return queue;
 }

@@ -41,7 +41,7 @@ export function showGameScreen(state, onRoundEnd) {
     <div>
       <p>${team.name} | <span id="timerVal">${cfg.time}</span> сек | <span id="roundScore">0</span> очок</p>
       <hr>
-      <h1 id="wordText">${word.text}</h1>
+      <h1 id="wordText">${word.uk}</h1>
       <hr>
       <div class="btn-row">
       <button id="btnCorrect">✓ Вгадали!</button>
@@ -59,13 +59,13 @@ export function showGameScreen(state, onRoundEnd) {
 
   function updateWord() {
     const w = nextWord(state);
-    $("#wordText").textContent = w.text;
+    $("#wordText").textContent = w.uk;
   }
 
   function addToList(word, guessed) {
     const list = $("#guessedList");
     const item = document.createElement("div");
-    item.textContent = `${guessed ? "✓" : "✗"} ${word.text}`;
+    item.textContent = `${guessed ? "✓" : "✗"} ${word.uk}`;
     list.prepend(item);
   }
 
