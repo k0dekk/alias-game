@@ -1,842 +1,497 @@
 [
-  {
-    "text": "кіт",
-    "level": 1
-  },
-  {
-    "text": "собака",
-    "level": 1
-  },
-  {
-    "text": "кінь",
-    "level": 1
-  },
-  {
-    "text": "корова",
-    "level": 1
-  },
-  {
-    "text": "свиня",
-    "level": 1
-  },
-  {
-    "text": "курка",
-    "level": 1
-  },
-  {
-    "text": "качка",
-    "level": 1
-  },
-  {
-    "text": "риба",
-    "level": 1
-  },
-  {
-    "text": "метелик",
-    "level": 1
-  },
-  {
-    "text": "жаба",
-    "level": 1
-  },
-  {
-    "text": "черепаха",
-    "level": 1
-  },
-  {
-    "text": "папуга",
-    "level": 1
-  },
-  {
-    "text": "слон",
-    "level": 1
-  },
-  {
-    "text": "лев",
-    "level": 1
-  },
-  {
-    "text": "миша",
-    "level": 1
-  },
-  {
-    "text": "вовк",
-    "level": 1
-  },
-  {
-    "text": "ведмідь",
-    "level": 1
-  },
-  {
-    "text": "бджола",
-    "level": 1
-  },
-  {
-    "text": "пінгвін",
-    "level": 1
-  },
-  {
-    "text": "акула",
-    "level": 1
-  },
-  {
-    "text": "павук",
-    "level": 1
-  },
-  {
-    "text": "жирафа",
-    "level": 1
-  },
-  {
-    "text": "зебра",
-    "level": 1
-  },
-  {
-    "text": "хліб",
-    "level": 1
-  },
-  {
-    "text": "молоко",
-    "level": 1
-  },
-  {
-    "text": "яйце",
-    "level": 1
-  },
-  {
-    "text": "масло",
-    "level": 1
-  },
-  {
-    "text": "цукор",
-    "level": 1
-  },
-  {
-    "text": "сіль",
-    "level": 1
-  },
-  {
-    "text": "вода",
-    "level": 1
-  },
-  {
-    "text": "сік",
-    "level": 1
-  },
-  {
-    "text": "яблуко",
-    "level": 1
-  },
-  {
-    "text": "банан",
-    "level": 1
-  },
-  {
-    "text": "морква",
-    "level": 1
-  },
-  {
-    "text": "картопля",
-    "level": 1
-  },
-  {
-    "text": "піца",
-    "level": 1
-  },
-  {
-    "text": "тортик",
-    "level": 1
-  },
-  {
-    "text": "сир",
-    "level": 1
-  },
-  {
-    "text": "кава",
-    "level": 1
-  },
-  {
-    "text": "чай",
-    "level": 1
-  },
-  {
-    "text": "морозиво",
-    "level": 1
-  },
-  {
-    "text": "ковбаса",
-    "level": 1
-  },
-  {
-    "text": "кавун",
-    "level": 1
-  },
-  {
-    "text": "шоколад",
-    "level": 1
-  },
-  {
-    "text": "капуста",
-    "level": 1
-  },
-  {
-    "text": "мед",
-    "level": 1
-  },
-  {
-    "text": "стіл",
-    "level": 1
-  },
-  {
-    "text": "стілець",
-    "level": 1
-  },
-  {
-    "text": "ліжко",
-    "level": 1
-  },
-  {
-    "text": "двері",
-    "level": 1
-  },
-  {
-    "text": "вікно",
-    "level": 1
-  },
-  {
-    "text": "лампа",
-    "level": 1
-  },
-  {
-    "text": "книга",
-    "level": 1
-  },
-  {
-    "text": "ключ",
-    "level": 1
-  },
-  {
-    "text": "ложка",
-    "level": 1
-  },
-  {
-    "text": "вилка",
-    "level": 1
-  },
-  {
-    "text": "чашка",
-    "level": 1
-  },
-  {
-    "text": "телефон",
-    "level": 1
-  },
-  {
-    "text": "дзеркало",
-    "level": 1
-  },
-  {
-    "text": "диван",
-    "level": 1
-  },
-  {
-    "text": "шафа",
-    "level": 1
-  },
-  {
-    "text": "годинник",
-    "level": 1
-  },
-  {
-    "text": "рюкзак",
-    "level": 1
-  },
-  {
-    "text": "мило",
-    "level": 1
-  },
-  {
-    "text": "рушник",
-    "level": 1
-  },
-  {
-    "text": "гребінець",
-    "level": 1
-  },
-  {
-    "text": "телевізор",
-    "level": 1
-  },
-  {
-    "text": "ковдра",
-    "level": 1
-  },
-  {
-    "text": "сонце",
-    "level": 1
-  },
-  {
-    "text": "місяць",
-    "level": 1
-  },
-  {
-    "text": "зірка",
-    "level": 1
-  },
-  {
-    "text": "хмара",
-    "level": 1
-  },
-  {
-    "text": "дощ",
-    "level": 1
-  },
-  {
-    "text": "сніг",
-    "level": 1
-  },
-  {
-    "text": "річка",
-    "level": 1
-  },
-  {
-    "text": "гора",
-    "level": 1
-  },
-  {
-    "text": "трава",
-    "level": 1
-  },
-  {
-    "text": "квітка",
-    "level": 1
-  },
-  {
-    "text": "дерево",
-    "level": 1
-  },
-  {
-    "text": "ліс",
-    "level": 1
-  },
-  {
-    "text": "море",
-    "level": 1
-  },
-  {
-    "text": "пісок",
-    "level": 1
-  },
-  {
-    "text": "вогонь",
-    "level": 1
-  },
-  {
-    "text": "вітер",
-    "level": 1
-  },
-  {
-    "text": "аеропорт",
-    "level": 2
-  },
-  {
-    "text": "бібліотека",
-    "level": 2
-  },
-  {
-    "text": "лікарня",
-    "level": 2
-  },
-  {
-    "text": "стадіон",
-    "level": 2
-  },
-  {
-    "text": "музей",
-    "level": 2
-  },
-  {
-    "text": "ринок",
-    "level": 2
-  },
-  {
-    "text": "університет",
-    "level": 2
-  },
-  {
-    "text": "ресторан",
-    "level": 2
-  },
-  {
-    "text": "готель",
-    "level": 2
-  },
-  {
-    "text": "театр",
-    "level": 2
-  },
-  {
-    "text": "вокзал",
-    "level": 2
-  },
-  {
-    "text": "аптека",
-    "level": 2
-  },
-  {
-    "text": "церква",
-    "level": 2
-  },
-  {
-    "text": "зоопарк",
-    "level": 2
-  },
-  {
-    "text": "басейн",
-    "level": 2
-  },
-  {
-    "text": "банк",
-    "level": 2
-  },
-  {
-    "text": "парковка",
-    "level": 2
-  },
-  {
-    "text": "кінотеатр",
-    "level": 2
-  },
-  {
-    "text": "лікар",
-    "level": 2
-  },
-  {
-    "text": "вчитель",
-    "level": 2
-  },
-  {
-    "text": "пілот",
-    "level": 2
-  },
-  {
-    "text": "кухар",
-    "level": 2
-  },
-  {
-    "text": "юрист",
-    "level": 2
-  },
-  {
-    "text": "програміст",
-    "level": 2
-  },
-  {
-    "text": "журналіст",
-    "level": 2
-  },
-  {
-    "text": "архітектор",
-    "level": 2
-  },
-  {
-    "text": "поліцейський",
-    "level": 2
-  },
-  {
-    "text": "пожежник",
-    "level": 2
-  },
-  {
-    "text": "актор",
-    "level": 2
-  },
-  {
-    "text": "модель",
-    "level": 2
-  },
-  {
-    "text": "фермер",
-    "level": 2
-  },
-  {
-    "text": "сантехнік",
-    "level": 2
-  },
-  {
-    "text": "перукар",
-    "level": 2
-  },
-  {
-    "text": "охоронець",
-    "level": 2
-  },
-  {
-    "text": "стюардеса",
-    "level": 2
-  },
-  {
-    "text": "дизайнер",
-    "level": 2
-  },
-  {
-    "text": "парасолька",
-    "level": 2
-  },
-  {
-    "text": "валіза",
-    "level": 2
-  },
-  {
-    "text": "ліхтарик",
-    "level": 2
-  },
-  {
-    "text": "термометр",
-    "level": 2
-  },
-  {
-    "text": "бінокль",
-    "level": 2
-  },
-  {
-    "text": "мікрофон",
-    "level": 2
-  },
-  {
-    "text": "телескоп",
-    "level": 2
-  },
-  {
-    "text": "компас",
-    "level": 2
-  },
-  {
-    "text": "акваріум",
-    "level": 2
-  },
-  {
-    "text": "пилосос",
-    "level": 2
-  },
-  {
-    "text": "вудка",
-    "level": 2
-  },
-  {
-    "text": "навушники",
-    "level": 2
-  },
-  {
-    "text": "клавіатура",
-    "level": 2
-  },
-  {
-    "text": "кавоварка",
-    "level": 2
-  },
-  {
-    "text": "гітара",
-    "level": 2
-  },
-  {
-    "text": "самокат",
-    "level": 2
-  },
-  {
-    "text": "фен",
-    "level": 2
-  },
-  {
-    "text": "подорож",
-    "level": 2
-  },
-  {
-    "text": "дружба",
-    "level": 2
-  },
-  {
-    "text": "перемога",
-    "level": 2
-  },
-  {
-    "text": "таємниця",
-    "level": 2
-  },
-  {
-    "text": "пригода",
-    "level": 2
-  },
-  {
-    "text": "свято",
-    "level": 2
-  },
-  {
-    "text": "реклама",
-    "level": 2
-  },
-  {
-    "text": "помилка",
-    "level": 2
-  },
-  {
-    "text": "черга",
-    "level": 2
-  },
-  {
-    "text": "сюрприз",
-    "level": 2
-  },
-  {
-    "text": "ремонт",
-    "level": 2
-  },
-  {
-    "text": "інтерв'ю",
-    "level": 2
-  },
-  {
-    "text": "дієта",
-    "level": 2
-  },
-  {
-    "text": "тренування",
-    "level": 2
-  },
-  {
-    "text": "колекція",
-    "level": 2
-  },
-  {
-    "text": "побачення",
-    "level": 2
-  },
-  {
-    "text": "іспит",
-    "level": 2
-  },
-  {
-    "text": "рецепт",
-    "level": 2
-  },
-  {
-    "text": "справедливість",
-    "level": 3
-  },
-  {
-    "text": "демократія",
-    "level": 3
-  },
-  {
-    "text": "філософія",
-    "level": 3
-  },
-  {
-    "text": "абсурд",
-    "level": 3
-  },
-  {
-    "text": "парадокс",
-    "level": 3
-  },
-  {
-    "text": "гіпотеза",
-    "level": 3
-  },
-  {
-    "text": "інтуїція",
-    "level": 3
-  },
-  {
-    "text": "симетрія",
-    "level": 3
-  },
-  {
-    "text": "ілюзія",
-    "level": 3
-  },
-  {
-    "text": "амбіція",
-    "level": 3
-  },
-  {
-    "text": "ностальгія",
-    "level": 3
-  },
-  {
-    "text": "хаос",
-    "level": 3
-  },
-  {
-    "text": "егоїзм",
-    "level": 3
-  },
-  {
-    "text": "депресія",
-    "level": 3
-  },
-  {
-    "text": "натхнення",
-    "level": 3
-  },
-  {
-    "text": "альтруїзм",
-    "level": 3
-  },
-  {
-    "text": "скептицизм",
-    "level": 3
-  },
-  {
-    "text": "бюрократія",
-    "level": 3
-  },
-  {
-    "text": "реінкарнація",
-    "level": 3
-  },
-  {
-    "text": "харизма",
-    "level": 3
-  },
-  {
-    "text": "меланхолія",
-    "level": 3
-  },
-  {
-    "text": "ейфорія",
-    "level": 3
-  },
-  {
-    "text": "лабіринт",
-    "level": 3
-  },
-  {
-    "text": "феномен",
-    "level": 3
-  },
-  {
-    "text": "монополія",
-    "level": 3
-  },
-  {
-    "text": "стереотип",
-    "level": 3
-  },
-  {
-    "text": "імпровізація",
-    "level": 3
-  },
-  {
-    "text": "квант",
-    "level": 3
-  },
-  {
-    "text": "генетика",
-    "level": 3
-  },
-  {
-    "text": "нейромережа",
-    "level": 3
-  },
-  {
-    "text": "блокчейн",
-    "level": 3
-  },
-  {
-    "text": "маніпуляція",
-    "level": 3
-  },
-  {
-    "text": "іронія",
-    "level": 3
-  },
-  {
-    "text": "корупція",
-    "level": 3
-  },
-  {
-    "text": "інфляція",
-    "level": 3
-  },
-  {
-    "text": "еволюція",
-    "level": 3
-  },
-  {
-    "text": "деградація",
-    "level": 3
-  },
-  {
-    "text": "плацебо",
-    "level": 3
-  },
-  {
-    "text": "саботаж",
-    "level": 3
-  },
-  {
-    "text": "антибіотик",
-    "level": 3
-  },
-  {
-    "text": "голограма",
-    "level": 3
-  },
-  {
-    "text": "магнетизм",
-    "level": 3
-  },
-  {
-    "text": "фотосинтез",
-    "level": 3
-  },
-  {
-    "text": "адреналін",
-    "level": 3
-  },
-  {
-    "text": "гравітація",
-    "level": 3
-  },
-  {
-    "text": "радіація",
-    "level": 3
-  },
-  {
-    "text": "вакцина",
-    "level": 3
-  },
-  {
-    "text": "алгоритм",
-    "level": 3
-  },
-  {
-    "text": "карантин",
-    "level": 3
-  },
-  {
-    "text": "цензура",
-    "level": 3
-  },
-  {
-    "text": "дефіцит",
-    "level": 3
-  },
-  {
-    "text": "автентичність",
-    "level": 3
-  },
-  {
-    "text": "резонанс",
-    "level": 3
-  },
-  {
-    "text": "субсидія",
-    "level": 3
-  },
-  {
-    "text": "іпотека",
-    "level": 3
-  }
+  { "category": "animals", "level": 1, "uk": "кіт", "en": "cat" },
+  { "category": "animals", "level": 1, "uk": "собака", "en": "dog" },
+  { "category": "animals", "level": 1, "uk": "корова", "en": "cow" },
+  { "category": "animals", "level": 1, "uk": "кінь", "en": "horse" },
+  { "category": "animals", "level": 1, "uk": "свиня", "en": "pig" },
+  { "category": "animals", "level": 1, "uk": "миша", "en": "mouse" },
+  { "category": "animals", "level": 1, "uk": "качка", "en": "duck" },
+  { "category": "animals", "level": 1, "uk": "лев", "en": "lion" },
+  { "category": "animals", "level": 1, "uk": "тигр", "en": "tiger" },
+  { "category": "animals", "level": 1, "uk": "ведмідь", "en": "bear" },
+  { "category": "animals", "level": 1, "uk": "слон", "en": "elephant" },
+  { "category": "animals", "level": 1, "uk": "мавпа", "en": "monkey" },
+  { "category": "animals", "level": 1, "uk": "лисиця", "en": "fox" },
+  { "category": "animals", "level": 1, "uk": "вовк", "en": "wolf" },
+  { "category": "animals", "level": 1, "uk": "кролик", "en": "rabbit" },
+  { "category": "animals", "level": 2, "uk": "зебра", "en": "zebra" },
+  { "category": "animals", "level": 2, "uk": "жираф", "en": "giraffe" },
+  { "category": "animals", "level": 2, "uk": "пінгвін", "en": "penguin" },
+  { "category": "animals", "level": 2, "uk": "єнот", "en": "raccoon" },
+  { "category": "animals", "level": 2, "uk": "кенгуру", "en": "kangaroo" },
+  { "category": "animals", "level": 2, "uk": "верблюд", "en": "camel" },
+  { "category": "animals", "level": 2, "uk": "дельфін", "en": "dolphin" },
+  { "category": "animals", "level": 2, "uk": "акула", "en": "shark" },
+  { "category": "animals", "level": 2, "uk": "орел", "en": "eagle" },
+  { "category": "animals", "level": 2, "uk": "папуга", "en": "parrot" },
+  { "category": "animals", "level": 2, "uk": "крокодил", "en": "crocodile" },
+  { "category": "animals", "level": 2, "uk": "бегемот", "en": "hippo" },
+  { "category": "animals", "level": 2, "uk": "черепаха", "en": "turtle" },
+  { "category": "animals", "level": 2, "uk": "сова", "en": "owl" },
+  { "category": "animals", "level": 2, "uk": "олень", "en": "deer" },
+  { "category": "animals", "level": 3, "uk": "качкодзьоб", "en": "platypus" },
+  { "category": "animals", "level": 3, "uk": "хамелеон", "en": "chameleon" },
+  { "category": "animals", "level": 3, "uk": "ігуана", "en": "iguana" },
+  { "category": "animals", "level": 3, "uk": "броненосець", "en": "armadillo" },
+  { "category": "animals", "level": 3, "uk": "лінивець", "en": "sloth" },
+  { "category": "animals", "level": 3, "uk": "мурахоїд", "en": "anteater" },
+  { "category": "animals", "level": 3, "uk": "лемур", "en": "lemur" },
+  { "category": "animals", "level": 3, "uk": "варан", "en": "monitor lizard" },
+  { "category": "animals", "level": 3, "uk": "сурикат", "en": "meerkat" },
+  { "category": "animals", "level": 3, "uk": "тапір", "en": "tapir" },
+  { "category": "animals", "level": 3, "uk": "коала", "en": "koala" },
+  { "category": "animals", "level": 3, "uk": "пантера", "en": "panther" },
+  { "category": "animals", "level": 3, "uk": "рись", "en": "lynx" },
+  { "category": "animals", "level": 3, "uk": "гієна", "en": "hyena" },
+  { "category": "animals", "level": 3, "uk": "борсук", "en": "badger" },
+  { "category": "food", "level": 1, "uk": "хліб", "en": "bread" },
+  { "category": "food", "level": 1, "uk": "вода", "en": "water" },
+  { "category": "food", "level": 1, "uk": "молоко", "en": "milk" },
+  { "category": "food", "level": 1, "uk": "сир", "en": "cheese" },
+  { "category": "food", "level": 1, "uk": "яблуко", "en": "apple" },
+  { "category": "food", "level": 1, "uk": "банан", "en": "banana" },
+  { "category": "food", "level": 1, "uk": "м'ясо", "en": "meat" },
+  { "category": "food", "level": 1, "uk": "риба", "en": "fish" },
+  { "category": "food", "level": 1, "uk": "суп", "en": "soup" },
+  { "category": "food", "level": 1, "uk": "яйце", "en": "egg" },
+  { "category": "food", "level": 1, "uk": "сік", "en": "juice" },
+  { "category": "food", "level": 1, "uk": "цукор", "en": "sugar" },
+  { "category": "food", "level": 1, "uk": "сіль", "en": "salt" },
+  { "category": "food", "level": 1, "uk": "чай", "en": "tea" },
+  { "category": "food", "level": 1, "uk": "кава", "en": "coffee" },
+  { "category": "food", "level": 2, "uk": "піца", "en": "pizza" },
+  { "category": "food", "level": 2, "uk": "бургер", "en": "burger" },
+  { "category": "food", "level": 2, "uk": "салат", "en": "salad" },
+  { "category": "food", "level": 2, "uk": "макарони", "en": "pasta" },
+  { "category": "food", "level": 2, "uk": "шоколад", "en": "chocolate" },
+  { "category": "food", "level": 2, "uk": "морозиво", "en": "ice cream" },
+  { "category": "food", "level": 2, "uk": "печиво", "en": "cookie" },
+  { "category": "food", "level": 2, "uk": "йогурт", "en": "yogurt" },
+  { "category": "food", "level": 2, "uk": "ковбаса", "en": "sausage" },
+  { "category": "food", "level": 2, "uk": "млинці", "en": "pancakes" },
+  { "category": "food", "level": 2, "uk": "виноград", "en": "grapes" },
+  { "category": "food", "level": 2, "uk": "торт", "en": "cake" },
+  { "category": "food", "level": 2, "uk": "горіхи", "en": "nuts" },
+  { "category": "food", "level": 2, "uk": "мед", "en": "honey" },
+  { "category": "food", "level": 2, "uk": "олія", "en": "oil" },
+  { "category": "food", "level": 3, "uk": "артишок", "en": "artichoke" },
+  { "category": "food", "level": 3, "uk": "фондю", "en": "fondue" },
+  { "category": "food", "level": 3, "uk": "трюфель", "en": "truffle" },
+  { "category": "food", "level": 3, "uk": "кав'яр", "en": "caviar" },
+  { "category": "food", "level": 3, "uk": "спаржа", "en": "asparagus" },
+  { "category": "food", "level": 3, "uk": "устриця", "en": "oyster" },
+  { "category": "food", "level": 3, "uk": "марципани", "en": "marzipan" },
+  { "category": "food", "level": 3, "uk": "гуакамоле", "en": "guacamole" },
+  { "category": "food", "level": 3, "uk": "паелья", "en": "paella" },
+  { "category": "food", "level": 3, "uk": "рататуй", "en": "ratatouille" },
+  { "category": "food", "level": 3, "uk": "куркума", "en": "turmeric" },
+  { "category": "food", "level": 3, "uk": "мусс", "en": "mousse" },
+  { "category": "food", "level": 3, "uk": "брскетта", "en": "bruschetta" },
+  { "category": "food", "level": 3, "uk": "сорбет", "en": "sorbet" },
+  { "category": "food", "level": 3, "uk": "ризотто", "en": "risotto" },
+  { "category": "home", "level": 1, "uk": "стіл", "en": "table" },
+  { "category": "home", "level": 1, "uk": "стілець", "en": "chair" },
+  { "category": "home", "level": 1, "uk": "ліжко", "en": "bed" },
+  { "category": "home", "level": 1, "uk": "диван", "en": "sofa" },
+  { "category": "home", "level": 1, "uk": "двері", "en": "door" },
+  { "category": "home", "level": 1, "uk": "вікно", "en": "window" },
+  { "category": "home", "level": 1, "uk": "стіна", "en": "wall" },
+  { "category": "home", "level": 1, "uk": "підлога", "en": "floor" },
+  { "category": "home", "level": 1, "uk": "шафа", "en": "wardrobe" },
+  { "category": "home", "level": 1, "uk": "килим", "en": "rug" },
+  { "category": "home", "level": 1, "uk": "лампа", "en": "lamp" },
+  { "category": "home", "level": 1, "uk": "ключ", "en": "key" },
+  { "category": "home", "level": 1, "uk": "мило", "en": "soap" },
+  { "category": "home", "level": 1, "uk": "ложка", "en": "spoon" },
+  { "category": "home", "level": 1, "uk": "ніж", "en": "knife" },
+  { "category": "home", "level": 2, "uk": "телевізор", "en": "television" },
+  { "category": "home", "level": 2, "uk": "холодильник", "en": "refrigerator" },
+  { "category": "home", "level": 2, "uk": "праска", "en": "iron" },
+  { "category": "home", "level": 2, "uk": "дзеркало", "en": "mirror" },
+  { "category": "home", "level": 2, "uk": "подушка", "en": "pillow" },
+  { "category": "home", "level": 2, "uk": "ковдра", "en": "blanket" },
+  { "category": "home", "level": 2, "uk": "рушник", "en": "towel" },
+  { "category": "home", "level": 2, "uk": "ванна", "en": "bathtub" },
+  { "category": "home", "level": 2, "uk": "плита", "en": "stove" },
+  { "category": "home", "level": 2, "uk": "чайник", "en": "kettle" },
+  { "category": "home", "level": 2, "uk": "пилосос", "en": "vacuum cleaner" },
+  { "category": "home", "level": 2, "uk": "пральна машина", "en": "washing machine" },
+  { "category": "home", "level": 2, "uk": "картина", "en": "painting" },
+  { "category": "home", "level": 2, "uk": "годинник", "en": "clock" },
+  { "category": "home", "level": 2, "uk": "штори", "en": "curtains" },
+  { "category": "home", "level": 3, "uk": "горище", "en": "attic" },
+  { "category": "home", "level": 3, "uk": "підвал", "en": "basement" },
+  { "category": "home", "level": 3, "uk": "димохід", "en": "chimney" },
+  { "category": "home", "level": 3, "uk": "карниз", "en": "cornice" },
+  { "category": "home", "level": 3, "uk": "плінтус", "en": "baseboard" },
+  { "category": "home", "level": 3, "uk": "жалюзі", "en": "blinds" },
+  { "category": "home", "level": 3, "uk": "радіатор", "en": "radiator" },
+  { "category": "home", "level": 3, "uk": "вентиляція", "en": "ventilation" },
+  { "category": "home", "level": 3, "uk": "поріг", "en": "threshold" },
+  { "category": "home", "level": 3, "uk": "вішалка", "en": "hanger" },
+  { "category": "home", "level": 3, "uk": "комод", "en": "chest of drawers" },
+  { "category": "home", "level": 3, "uk": "антресоль", "en": "mezzanine" },
+  { "category": "home", "level": 3, "uk": "дверне вічко", "en": "peephole" },
+  { "category": "home", "level": 3, "uk": "абажур", "en": "lampshade" },
+  { "category": "home", "level": 3, "uk": "паркет", "en": "parquet" },
+  { "category": "nature", "level": 1, "uk": "сонце", "en": "sun" },
+  { "category": "nature", "level": 1, "uk": "місяць", "en": "moon" },
+  { "category": "nature", "level": 1, "uk": "небо", "en": "sky" },
+  { "category": "nature", "level": 1, "uk": "дерево", "en": "tree" },
+  { "category": "nature", "level": 1, "uk": "квітка", "en": "flower" },
+  { "category": "nature", "level": 1, "uk": "трава", "en": "grass" },
+  { "category": "nature", "level": 1, "uk": "вода", "en": "water" },
+  { "category": "nature", "level": 1, "uk": "ліс", "en": "forest" },
+  { "category": "nature", "level": 1, "uk": "гора", "en": "mountain" },
+  { "category": "nature", "level": 1, "uk": "річка", "en": "river" },
+  { "category": "nature", "level": 1, "uk": "камінь", "en": "stone" },
+  { "category": "nature", "level": 1, "uk": "пісок", "en": "sand" },
+  { "category": "nature", "level": 1, "uk": "вогонь", "en": "fire" },
+  { "category": "nature", "level": 1, "uk": "зірка", "en": "star" },
+  { "category": "nature", "level": 1, "uk": "море", "en": "sea" },
+  { "category": "nature", "level": 2, "uk": "озеро", "en": "lake" },
+  { "category": "nature", "level": 2, "uk": "океан", "en": "ocean" },
+  { "category": "nature", "level": 2, "uk": "пустеля", "en": "desert" },
+  { "category": "nature", "level": 2, "uk": "вулкан", "en": "volcano" },
+  { "category": "nature", "level": 2, "uk": "печера", "en": "cave" },
+  { "category": "nature", "level": 2, "uk": "дощ", "en": "rain" },
+  { "category": "nature", "level": 2, "uk": "сніг", "en": "snow" },
+  { "category": "nature", "level": 2, "uk": "вітер", "en": "wind" },
+  { "category": "nature", "level": 2, "uk": "хмара", "en": "cloud" },
+  { "category": "nature", "level": 2, "uk": "туман", "en": "fog" },
+  { "category": "nature", "level": 2, "uk": "острів", "en": "island" },
+  { "category": "nature", "level": 2, "uk": "водоспад", "en": "waterfall" },
+  { "category": "nature", "level": 2, "uk": "веселка", "en": "rainbow" },
+  { "category": "nature", "level": 2, "uk": "шторм", "en": "storm" },
+  { "category": "nature", "level": 2, "uk": "блискавка", "en": "lightning" },
+  { "category": "nature", "level": 3, "uk": "льодовик", "en": "glacier" },
+  { "category": "nature", "level": 3, "uk": "гейзер", "en": "geyser" },
+  { "category": "nature", "level": 3, "uk": "торнадо", "en": "tornado" },
+  { "category": "nature", "level": 3, "uk": "цунамі", "en": "tsunami" },
+  { "category": "nature", "level": 3, "uk": "ерозія", "en": "erosion" },
+  { "category": "nature", "level": 3, "uk": "сталактит", "en": "stalactite" },
+  { "category": "nature", "level": 3, "uk": "тундра", "en": "tundra" },
+  { "category": "nature", "level": 3, "uk": "оазис", "en": "oasis" },
+  { "category": "nature", "level": 3, "uk": "естуарій", "en": "estuary" },
+  { "category": "nature", "level": 3, "uk": "папороть", "en": "fern" },
+  { "category": "nature", "level": 3, "uk": "сталагміт", "en": "stalagmite" },
+  { "category": "nature", "level": 3, "uk": "корал", "en": "coral" },
+  { "category": "nature", "level": 3, "uk": "архіпелаг", "en": "archipelago" },
+  { "category": "nature", "level": 3, "uk": "каньйон", "en": "canyon" },
+  { "category": "nature", "level": 3, "uk": "савана", "en": "savannah" },
+  { "category": "places", "level": 1, "uk": "школа", "en": "school" },
+  { "category": "places", "level": 1, "uk": "магазин", "en": "shop" },
+  { "category": "places", "level": 1, "uk": "парк", "en": "park" },
+  { "category": "places", "level": 1, "uk": "дім", "en": "house" },
+  { "category": "places", "level": 1, "uk": "вулиця", "en": "street" },
+  { "category": "places", "level": 1, "uk": "місто", "en": "city" },
+  { "category": "places", "level": 1, "uk": "село", "en": "village" },
+  { "category": "places", "level": 1, "uk": "лікарня", "en": "hospital" },
+  { "category": "places", "level": 1, "uk": "аптека", "en": "pharmacy" },
+  { "category": "places", "level": 1, "uk": "банк", "en": "bank" },
+  { "category": "places", "level": 1, "uk": "ринок", "en": "market" },
+  { "category": "places", "level": 1, "uk": "офіс", "en": "office" },
+  { "category": "places", "level": 1, "uk": "кафе", "en": "cafe" },
+  { "category": "places", "level": 1, "uk": "стадіон", "en": "stadium" },
+  { "category": "places", "level": 1, "uk": "зупинка", "en": "bus stop" },
+  { "category": "places", "level": 2, "uk": "аеропорт", "en": "airport" },
+  { "category": "places", "level": 2, "uk": "вокзал", "en": "train station" },
+  { "category": "places", "level": 2, "uk": "кінотеатр", "en": "cinema" },
+  { "category": "places", "level": 2, "uk": "ресторан", "en": "restaurant" },
+  { "category": "places", "level": 2, "uk": "музей", "en": "museum" },
+  { "category": "places", "level": 2, "uk": "бібліотека", "en": "library" },
+  { "category": "places", "level": 2, "uk": "пляж", "en": "beach" },
+  { "category": "places", "level": 2, "uk": "готель", "en": "hotel" },
+  { "category": "places", "level": 2, "uk": "басейн", "en": "pool" },
+  { "category": "places", "level": 2, "uk": "театр", "en": "theater" },
+  { "category": "places", "level": 2, "uk": "цирк", "en": "circus" },
+  { "category": "places", "level": 2, "uk": "зоопарк", "en": "zoo" },
+  { "category": "places", "level": 2, "uk": "церква", "en": "church" },
+  { "category": "places", "level": 2, "uk": "замок", "en": "castle" },
+  { "category": "places", "level": 2, "uk": "в'язниця", "en": "prison" },
+  { "category": "places", "level": 3, "uk": "обсерваторія", "en": "observatory" },
+  { "category": "places", "level": 3, "uk": "ратуша", "en": "city hall" },
+  { "category": "places", "level": 3, "uk": "маяк", "en": "lighthouse" },
+  { "category": "places", "level": 3, "uk": "катакомби", "en": "catacombs" },
+  { "category": "places", "level": 3, "uk": "мечеть", "en": "mosque" },
+  { "category": "places", "level": 3, "uk": "синагога", "en": "synagogue" },
+  { "category": "places", "level": 3, "uk": "посольство", "en": "embassy" },
+  { "category": "places", "level": 3, "uk": "консерваторія", "en": "conservatory" },
+  { "category": "places", "level": 3, "uk": "планетарій", "en": "planetarium" },
+  { "category": "places", "level": 3, "uk": "гавань", "en": "harbor" },
+  { "category": "places", "level": 3, "uk": "монастир", "en": "monastery" },
+  { "category": "places", "level": 3, "uk": "хмарочос", "en": "skyscraper" },
+  { "category": "places", "level": 3, "uk": "верф", "en": "shipyard" },
+  { "category": "places", "level": 3, "uk": "мавзолей", "en": "mausoleum" },
+  { "category": "places", "level": 3, "uk": "метрополітен", "en": "metropolitan" },
+  { "category": "professions", "level": 1, "uk": "лікар", "en": "doctor" },
+  { "category": "professions", "level": 1, "uk": "вчитель", "en": "teacher" },
+  { "category": "professions", "level": 1, "uk": "кухар", "en": "chef" },
+  { "category": "professions", "level": 1, "uk": "водій", "en": "driver" },
+  { "category": "professions", "level": 1, "uk": "поліцейський", "en": "policeman" },
+  { "category": "professions", "level": 1, "uk": "пожежник", "en": "firefighter" },
+  { "category": "professions", "level": 1, "uk": "продавець", "en": "seller" },
+  { "category": "professions", "level": 1, "uk": "будівельник", "en": "builder" },
+  { "category": "professions", "level": 1, "uk": "фермер", "en": "farmer" },
+  { "category": "professions", "level": 1, "uk": "співак", "en": "singer" },
+  { "category": "professions", "level": 1, "uk": "художник", "en": "artist" },
+  { "category": "professions", "level": 1, "uk": "актор", "en": "actor" },
+  { "category": "professions", "level": 1, "uk": "офіціант", "en": "waiter" },
+  { "category": "professions", "level": 1, "uk": "медсестра", "en": "nurse" },
+  { "category": "professions", "level": 1, "uk": "пілот", "en": "pilot" },
+  { "category": "professions", "level": 2, "uk": "програміст", "en": "programmer" },
+  { "category": "professions", "level": 2, "uk": "юрист", "en": "lawyer" },
+  { "category": "professions", "level": 2, "uk": "інженер", "en": "engineer" },
+  { "category": "professions", "level": 2, "uk": "дизайнер", "en": "designer" },
+  { "category": "professions", "level": 2, "uk": "фотограф", "en": "photographer" },
+  { "category": "professions", "level": 2, "uk": "журналіст", "en": "journalist" },
+  { "category": "professions", "level": 2, "uk": "архітектор", "en": "architect" },
+  { "category": "professions", "level": 2, "uk": "бухгалтер", "en": "accountant" },
+  { "category": "professions", "level": 2, "uk": "перукар", "en": "hairdresser" },
+  { "category": "professions", "level": 2, "uk": "ветеринар", "en": "veterinarian" },
+  { "category": "professions", "level": 2, "uk": "електрик", "en": "electrician" },
+  { "category": "professions", "level": 2, "uk": "сантехнік", "en": "plumber" },
+  { "category": "professions", "level": 2, "uk": "психолог", "en": "psychologist" },
+  { "category": "professions", "level": 2, "uk": "механік", "en": "mechanic" },
+  { "category": "professions", "level": 2, "uk": "моряк", "en": "sailor" },
+  { "category": "professions", "level": 3, "uk": "кінолог", "en": "cynologist" },
+  { "category": "professions", "level": 3, "uk": "сомельє", "en": "sommelier" },
+  { "category": "professions", "level": 3, "uk": "актуарій", "en": "actuary" },
+  { "category": "professions", "level": 3, "uk": "маркшейдер", "en": "mine surveyor" },
+  { "category": "professions", "level": 3, "uk": "таксидерміст", "en": "taxidermist" },
+  { "category": "professions", "level": 3, "uk": "орнітолог", "en": "ornithologist" },
+  { "category": "professions", "level": 3, "uk": "кримінолог", "en": "criminologist" },
+  { "category": "professions", "level": 3, "uk": "спелеолог", "en": "speleologist" },
+  { "category": "professions", "level": 3, "uk": "хореограф", "en": "choreographer" },
+  { "category": "professions", "level": 3, "uk": "ілюзіоніст", "en": "illusionist" },
+  { "category": "professions", "level": 3, "uk": "археолог", "en": "archaeologist" },
+  { "category": "professions", "level": 3, "uk": "дипломат", "en": "diplomat" },
+  { "category": "professions", "level": 3, "uk": "генетик", "en": "geneticist" },
+  { "category": "professions", "level": 3, "uk": "логопед", "en": "speech therapist" },
+  { "category": "professions", "level": 3, "uk": "брокер", "en": "broker" },
+  { "category": "things_and_devices", "level": 1, "uk": "телефон", "en": "phone" },
+  { "category": "things_and_devices", "level": 1, "uk": "комп'ютер", "en": "computer" },
+  { "category": "things_and_devices", "level": 1, "uk": "годинник", "en": "watch" },
+  { "category": "things_and_devices", "level": 1, "uk": "книга", "en": "book" },
+  { "category": "things_and_devices", "level": 1, "uk": "ручка", "en": "pen" },
+  { "category": "things_and_devices", "level": 1, "uk": "олівець", "en": "pencil" },
+  { "category": "things_and_devices", "level": 1, "uk": "сумка", "en": "bag" },
+  { "category": "things_and_devices", "level": 1, "uk": "ключ", "en": "key" },
+  { "category": "things_and_devices", "level": 1, "uk": "окуляри", "en": "glasses" },
+  { "category": "things_and_devices", "level": 1, "uk": "чашка", "en": "cup" },
+  { "category": "things_and_devices", "level": 1, "uk": "парасолька", "en": "umbrella" },
+  { "category": "things_and_devices", "level": 1, "uk": "гаманець", "en": "wallet" },
+  { "category": "things_and_devices", "level": 1, "uk": "дзеркало", "en": "mirror" },
+  { "category": "things_and_devices", "level": 1, "uk": "ножиці", "en": "scissors" },
+  { "category": "things_and_devices", "level": 1, "uk": "гребінець", "en": "comb" },
+  { "category": "things_and_devices", "level": 2, "uk": "навушники", "en": "headphones" },
+  { "category": "things_and_devices", "level": 2, "uk": "камера", "en": "camera" },
+  { "category": "things_and_devices", "level": 2, "uk": "мікрофон", "en": "microphone" },
+  { "category": "things_and_devices", "level": 2, "uk": "планшет", "en": "tablet" },
+  { "category": "things_and_devices", "level": 2, "uk": "ноутбук", "en": "laptop" },
+  { "category": "things_and_devices", "level": 2, "uk": "принтер", "en": "printer" },
+  { "category": "things_and_devices", "level": 2, "uk": "флешка", "en": "flash drive" },
+  { "category": "things_and_devices", "level": 2, "uk": "батарейка", "en": "battery" },
+  { "category": "things_and_devices", "level": 2, "uk": "калькулятор", "en": "calculator" },
+  { "category": "things_and_devices", "level": 2, "uk": "ліхтарик", "en": "flashlight" },
+  { "category": "things_and_devices", "level": 2, "uk": "пилосос", "en": "vacuum cleaner" },
+  { "category": "things_and_devices", "level": 2, "uk": "тостер", "en": "toaster" },
+  { "category": "things_and_devices", "level": 2, "uk": "модем", "en": "modem" },
+  { "category": "things_and_devices", "level": 2, "uk": "клавіатура", "en": "keyboard" },
+  { "category": "things_and_devices", "level": 2, "uk": "мишка", "en": "mouse" },
+  { "category": "things_and_devices", "level": 3, "uk": "осцилограф", "en": "oscilloscope" },
+  { "category": "things_and_devices", "level": 3, "uk": "тепловізор", "en": "thermal imager" },
+  { "category": "things_and_devices", "level": 3, "uk": "гіроскутер", "en": "hoverboard" },
+  { "category": "things_and_devices", "level": 3, "uk": "мультиметр", "en": "multimeter" },
+  { "category": "things_and_devices", "level": 3, "uk": "ендоскоп", "en": "endoscope" },
+  { "category": "things_and_devices", "level": 3, "uk": "квадрокоптер", "en": "quadcopter" },
+  { "category": "things_and_devices", "level": 3, "uk": "маршрутизатор", "en": "router" },
+  { "category": "things_and_devices", "level": 3, "uk": "3D-принтер", "en": "3D printer" },
+  { "category": "things_and_devices", "level": 3, "uk": "спектрометр", "en": "spectrometer" },
+  { "category": "things_and_devices", "level": 3, "uk": "дефібрилятор", "en": "defibrillator" },
+  { "category": "things_and_devices", "level": 3, "uk": "стетоскоп", "en": "stethoscope" },
+  { "category": "things_and_devices", "level": 3, "uk": "сейф", "en": "safe" },
+  { "category": "things_and_devices", "level": 3, "uk": "штатив", "en": "tripod" },
+  { "category": "things_and_devices", "level": 3, "uk": "стабілізатор", "en": "stabilizer" },
+  { "category": "things_and_devices", "level": 3, "uk": "генератор", "en": "generator" },
+  { "category": "events", "level": 1, "uk": "день народження", "en": "birthday" },
+  { "category": "events", "level": 1, "uk": "весілля", "en": "wedding" },
+  { "category": "events", "level": 1, "uk": "новий рік", "en": "new year" },
+  { "category": "events", "level": 1, "uk": "свято", "en": "holiday" },
+  { "category": "events", "level": 1, "uk": "вечірка", "en": "party" },
+  { "category": "events", "level": 1, "uk": "концерт", "en": "concert" },
+  { "category": "events", "level": 1, "uk": "урок", "en": "lesson" },
+  { "category": "events", "level": 1, "uk": "гра", "en": "game" },
+  { "category": "events", "level": 1, "uk": "обід", "en": "lunch" },
+  { "category": "events", "level": 1, "uk": "сон", "en": "sleep" },
+  { "category": "events", "level": 1, "uk": "подорож", "en": "trip" },
+  { "category": "events", "level": 1, "uk": "зустріч", "en": "meeting" },
+  { "category": "events", "level": 1, "uk": "сніданок", "en": "breakfast" },
+  { "category": "events", "level": 1, "uk": "вечеря", "en": "dinner" },
+  { "category": "events", "level": 1, "uk": "прогулянка", "en": "walk" },
+  { "category": "events", "level": 2, "uk": "фестиваль", "en": "festival" },
+  { "category": "events", "level": 2, "uk": "змагання", "en": "competition" },
+  { "category": "events", "level": 2, "uk": "виставка", "en": "exhibition" },
+  { "category": "events", "level": 2, "uk": "ярмарок", "en": "fair" },
+  { "category": "events", "level": 2, "uk": "конференція", "en": "conference" },
+  { "category": "events", "level": 2, "uk": "екзамен", "en": "exam" },
+  { "category": "events", "level": 2, "uk": "марафон", "en": "marathon" },
+  { "category": "events", "level": 2, "uk": "карнавал", "en": "carnival" },
+  { "category": "events", "level": 2, "uk": "парад", "en": "parade" },
+  { "category": "events", "level": 2, "uk": "пікнік", "en": "picnic" },
+  { "category": "events", "level": 2, "uk": "вистава", "en": "performance" },
+  { "category": "events", "level": 2, "uk": "тренування", "en": "training" },
+  { "category": "events", "level": 2, "uk": "презентація", "en": "presentation" },
+  { "category": "events", "level": 2, "uk": "інтерв'ю", "en": "interview" },
+  { "category": "events", "level": 2, "uk": "політ", "en": "flight" },
+  { "category": "events", "level": 3, "uk": "інавгурація", "en": "inauguration" },
+  { "category": "events", "level": 3, "uk": "симпозіум", "en": "symposium" },
+  { "category": "events", "level": 3, "uk": "референдум", "en": "referendum" },
+  { "category": "events", "level": 3, "uk": "блекаут", "en": "blackout" },
+  { "category": "events", "level": 3, "uk": "сонячне затемнення", "en": "solar eclipse" },
+  { "category": "events", "level": 3, "uk": "прем'єра", "en": "premiere" },
+  { "category": "events", "level": 3, "uk": "землетрус", "en": "earthquake" },
+  { "category": "events", "level": 3, "uk": "аукціон", "en": "auction" },
+  { "category": "events", "level": 3, "uk": "церемонія", "en": "ceremony" },
+  { "category": "events", "level": 3, "uk": "страйк", "en": "strike" },
+  { "category": "events", "level": 3, "uk": "саміт", "en": "summit" },
+  { "category": "events", "level": 3, "uk": "дебати", "en": "debates" },
+  { "category": "events", "level": 3, "uk": "експедиція", "en": "expedition" },
+  { "category": "events", "level": 3, "uk": "коронація", "en": "coronation" },
+  { "category": "events", "level": 3, "uk": "затемнення", "en": "eclipse" },
+  { "category": "abstractions", "level": 1, "uk": "любов", "en": "love" },
+  { "category": "abstractions", "level": 1, "uk": "дружба", "en": "friendship" },
+  { "category": "abstractions", "level": 1, "uk": "час", "en": "time" },
+  { "category": "abstractions", "level": 1, "uk": "життя", "en": "life" },
+  { "category": "abstractions", "level": 1, "uk": "день", "en": "day" },
+  { "category": "abstractions", "level": 1, "uk": "ніч", "en": "night" },
+  { "category": "abstractions", "level": 1, "uk": "добро", "en": "good" },
+  { "category": "abstractions", "level": 1, "uk": "зло", "en": "evil" },
+  { "category": "abstractions", "level": 1, "uk": "радість", "en": "joy" },
+  { "category": "abstractions", "level": 1, "uk": "сум", "en": "sadness" },
+  { "category": "abstractions", "level": 1, "uk": "сила", "en": "strength" },
+  { "category": "abstractions", "level": 1, "uk": "розум", "en": "mind" },
+  { "category": "abstractions", "level": 1, "uk": "світло", "en": "light" },
+  { "category": "abstractions", "level": 1, "uk": "тінь", "en": "shadow" },
+  { "category": "abstractions", "level": 1, "uk": "звук", "en": "sound" },
+  { "category": "abstractions", "level": 2, "uk": "свобода", "en": "freedom" },
+  { "category": "abstractions", "level": 2, "uk": "справедливість", "en": "justice" },
+  { "category": "abstractions", "level": 2, "uk": "мрія", "en": "dream" },
+  { "category": "abstractions", "level": 2, "uk": "надія", "en": "hope" },
+  { "category": "abstractions", "level": 2, "uk": "страх", "en": "fear" },
+  { "category": "abstractions", "level": 2, "uk": "правда", "en": "truth" },
+  { "category": "abstractions", "level": 2, "uk": "брехня", "en": "lie" },
+  { "category": "abstractions", "level": 2, "uk": "успіх", "en": "success" },
+  { "category": "abstractions", "level": 2, "uk": "пам'ять", "en": "memory" },
+  { "category": "abstractions", "level": 2, "uk": "ідея", "en": "idea" },
+  { "category": "abstractions", "level": 2, "uk": "совість", "en": "conscience" },
+  { "category": "abstractions", "level": 2, "uk": "доля", "en": "destiny" },
+  { "category": "abstractions", "level": 2, "uk": "енергія", "en": "energy" },
+  { "category": "abstractions", "level": 2, "uk": "хаос", "en": "chaos" },
+  { "category": "abstractions", "level": 2, "uk": "гармонія", "en": "harmony" },
+  { "category": "abstractions", "level": 3, "uk": "екзистенція", "en": "existence" },
+  { "category": "abstractions", "level": 3, "uk": "парадокс", "en": "paradox" },
+  { "category": "abstractions", "level": 3, "uk": "ентропія", "en": "entropy" },
+  { "category": "abstractions", "level": 3, "uk": "катарсис", "en": "catharsis" },
+  { "category": "abstractions", "level": 3, "uk": "ностальгія", "en": "nostalgia" },
+  { "category": "abstractions", "level": 3, "uk": "синергія", "en": "synergy" },
+  { "category": "abstractions", "level": 3, "uk": "апатія", "en": "apathy" },
+  { "category": "abstractions", "level": 3, "uk": "прагматизм", "en": "pragmatism" },
+  { "category": "abstractions", "level": 3, "uk": "утопія", "en": "utopia" },
+  { "category": "abstractions", "level": 3, "uk": "меланхолія", "en": "melancholy" },
+  { "category": "abstractions", "level": 3, "uk": "альтруїзм", "en": "altruism" },
+  { "category": "abstractions", "level": 3, "uk": "нігілізм", "en": "nihilism" },
+  { "category": "abstractions", "level": 3, "uk": "абстракція", "en": "abstraction" },
+  { "category": "abstractions", "level": 3, "uk": "дуалізм", "en": "dualism" },
+  { "category": "abstractions", "level": 3, "uk": "метафора", "en": "metaphor" },
+  { "category": "science", "level": 1, "uk": "математика", "en": "mathematics" },
+  { "category": "science", "level": 1, "uk": "фізика", "en": "physics" },
+  { "category": "science", "level": 1, "uk": "хімія", "en": "chemistry" },
+  { "category": "science", "level": 1, "uk": "біологія", "en": "biology" },
+  { "category": "science", "level": 1, "uk": "атом", "en": "atom" },
+  { "category": "science", "level": 1, "uk": "планета", "en": "planet" },
+  { "category": "science", "level": 1, "uk": "космос", "en": "space" },
+  { "category": "science", "level": 1, "uk": "число", "en": "number" },
+  { "category": "science", "level": 1, "uk": "вчений", "en": "scientist" },
+  { "category": "science", "level": 1, "uk": "дослід", "en": "experiment" },
+  { "category": "science", "level": 1, "uk": "вода", "en": "water" },
+  { "category": "science", "level": 1, "uk": "світло", "en": "light" },
+  { "category": "science", "level": 1, "uk": "звук", "en": "sound" },
+  { "category": "science", "level": 1, "uk": "земля", "en": "earth" },
+  { "category": "science", "level": 1, "uk": "карта", "en": "map" },
+  { "category": "science", "level": 2, "uk": "генетика", "en": "genetics" },
+  { "category": "science", "level": 2, "uk": "молекула", "en": "molecule" },
+  { "category": "science", "level": 2, "uk": "гравітація", "en": "gravity" },
+  { "category": "science", "level": 2, "uk": "еволюція", "en": "evolution" },
+  { "category": "science", "level": 2, "uk": "телескоп", "en": "telescope" },
+  { "category": "science", "level": 2, "uk": "мікроскоп", "en": "microscope" },
+  { "category": "science", "level": 2, "uk": "клітина", "en": "cell" },
+  { "category": "science", "level": 2, "uk": "бактерія", "en": "bacterium" },
+  { "category": "science", "level": 2, "uk": "вірус", "en": "virus" },
+  { "category": "science", "level": 2, "uk": "енергія", "en": "energy" },
+  { "category": "science", "level": 2, "uk": "ракета", "en": "rocket" },
+  { "category": "science", "level": 2, "uk": "лабораторія", "en": "laboratory" },
+  { "category": "science", "level": 2, "uk": "формула", "en": "formula" },
+  { "category": "science", "level": 2, "uk": "елемент", "en": "element" },
+  { "category": "science", "level": 2, "uk": "орбіта", "en": "orbit" },
+  { "category": "science", "level": 3, "uk": "квантова механіка", "en": "quantum mechanics" },
+  { "category": "science", "level": 3, "uk": "термодинаміка", "en": "thermodynamics" },
+  { "category": "science", "level": 3, "uk": "епігенетика", "en": "epigenetics" },
+  { "category": "science", "level": 3, "uk": "нейробіологія", "en": "neurobiology" },
+  { "category": "science", "level": 3, "uk": "фотосинтез", "en": "photosynthesis" },
+  { "category": "science", "level": 3, "uk": "антиматерія", "en": "antimatter" },
+  { "category": "science", "level": 3, "uk": "хромосома", "en": "chromosome" },
+  { "category": "science", "level": 3, "uk": "ізотоп", "en": "isotope" },
+  { "category": "science", "level": 3, "uk": "кварк", "en": "quark" },
+  { "category": "science", "level": 3, "uk": "сингулярність", "en": "singularity" },
+  { "category": "science", "level": 3, "uk": "ентропія", "en": "entropy" },
+  { "category": "science", "level": 3, "uk": "чорна діра", "en": "black hole" },
+  { "category": "science", "level": 3, "uk": "палеонтологія", "en": "paleontology" },
+  { "category": "science", "level": 3, "uk": "кібернетика", "en": "cybernetics" },
+  { "category": "science", "level": 3, "uk": "криптографія", "en": "cryptography" },
+  { "category": "society", "level": 1, "uk": "людина", "en": "human" },
+  { "category": "society", "level": 1, "uk": "родина", "en": "family" },
+  { "category": "society", "level": 1, "uk": "друг", "en": "friend" },
+  { "category": "society", "level": 1, "uk": "дитина", "en": "child" },
+  { "category": "society", "level": 1, "uk": "народ", "en": "people" },
+  { "category": "society", "level": 1, "uk": "країна", "en": "country" },
+  { "category": "society", "level": 1, "uk": "закон", "en": "law" },
+  { "category": "society", "level": 1, "uk": "гроші", "en": "money" },
+  { "category": "society", "level": 1, "uk": "робота", "en": "work" },
+  { "category": "society", "level": 1, "uk": "уряд", "en": "government" },
+  { "category": "society", "level": 1, "uk": "мова", "en": "language" },
+  { "category": "society", "level": 1, "uk": "місто", "en": "city" },
+  { "category": "society", "level": 1, "uk": "школа", "en": "school" },
+  { "category": "society", "level": 1, "uk": "ім'я", "en": "name" },
+  { "category": "society", "level": 1, "uk": "світ", "en": "world" },
+  { "category": "society", "level": 2, "uk": "культура", "en": "culture" },
+  { "category": "society", "level": 2, "uk": "економіка", "en": "economy" },
+  { "category": "society", "level": 2, "uk": "політика", "en": "politics" },
+  { "category": "society", "level": 2, "uk": "традиція", "en": "tradition" },
+  { "category": "society", "level": 2, "uk": "податок", "en": "tax" },
+  { "category": "society", "level": 2, "uk": "вибори", "en": "elections" },
+  { "category": "society", "level": 2, "uk": "медіа", "en": "media" },
+  { "category": "society", "level": 2, "uk": "релігія", "en": "religion" },
+  { "category": "society", "level": 2, "uk": "армія", "en": "army" },
+  { "category": "society", "level": 2, "uk": "громадянин", "en": "citizen" },
+  { "category": "society", "level": 2, "uk": "освіта", "en": "education" },
+  { "category": "society", "level": 2, "uk": "права", "en": "rights" },
+  { "category": "society", "level": 2, "uk": "свобода", "en": "freedom" },
+  { "category": "society", "level": 2, "uk": "бізнес", "en": "business" },
+  { "category": "society", "level": 2, "uk": "соціум", "en": "society" },
+  { "category": "society", "level": 3, "uk": "демократія", "en": "democracy" },
+  { "category": "society", "level": 3, "uk": "бюрократія", "en": "bureaucracy" },
+  { "category": "society", "level": 3, "uk": "инфляція", "en": "inflation" },
+  { "category": "society", "level": 3, "uk": "демографія", "en": "demography" },
+  { "category": "society", "level": 3, "uk": "глобалізація", "en": "globalization" },
+  { "category": "society", "level": 3, "uk": "ідеологія", "en": "ideology" },
+  { "category": "society", "level": 3, "uk": "дискримінація", "en": "discrimination" },
+  { "category": "society", "level": 3, "uk": "монополія", "en": "monopoly" },
+  { "category": "society", "level": 3, "uk": "стратифікація", "en": "stratification" },
+  { "category": "society", "level": 3, "uk": "консенсус", "en": "consensus" },
+  { "category": "society", "level": 3, "uk": "урбанізація", "en": "urbanization" },
+  { "category": "society", "level": 3, "uk": "толерантність", "en": "tolerance" },
+  { "category": "society", "level": 3, "uk": "суверенітет", "en": "sovereignty" },
+  { "category": "society", "level": 3, "uk": "корупція", "en": "corruption" },
+  { "category": "society", "level": 3, "uk": "ієрархія", "en": "hierarchy" }
 ]
