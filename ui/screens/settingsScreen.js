@@ -9,7 +9,7 @@ export function showSettingsScreen(onStart) {
   let targetScore = 30;
   let roundTime = 60;
 
-  let selectedCategories = ["all"];
+  let selectedCategories = CATEGORIES.map(c => c.id);
   let tempSelectedCategories = [];
   let isModalOpen = false;
 
@@ -163,7 +163,7 @@ export function showSettingsScreen(onStart) {
       onStart({
         teams: names,
         difficulty: selectedDifficulty,
-        category: selectedCategory,
+        selectedCategories: [...selectedCategories],
         targetScore,
         roundTime,
       });
