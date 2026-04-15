@@ -10,14 +10,18 @@ export function shuffle(arr) {
   return a;
 }
 
-export function createWordQueue(wordSet) {
+export function createWordQueue(wordSet, selectedCategories) {
   const queue = new PriorityWordQueue();
   const difficultyMap = { easy: 1, medium: 2, hard: 3 };
 
-  const filtered = wordSet === "all"
+  const difficultyFiltered = wordSet === "all"
     ? wordsData
     : wordsData.filter(w => w.level === difficultyMap[wordSet]);
 
+  const categoryFiltered = Array.isArray(selectedCategories) && selectedCategories.length > 0
+    ? difficultyFiltered.filter(w => selectedCategories.includes(w.category))
+    : difficultyFiltered;
+    
   shuffle(filtered).forEach(w => queue.enqueue({ text: w.text, level: w.level }, w.level));
 
   return queue;
