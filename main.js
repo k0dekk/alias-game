@@ -7,8 +7,8 @@ import { createGame }                               from "./game/gameState.js";
 
 let state = null;
 
-function startGame({ teams, difficulty }) {
-  state = createGame({ teams, difficulty });
+function startGame({ teams, difficulty, selectedCategories }) {
+  state = createGame({ teams, difficulty, selectedCategories });
   stopTimer();
   showGameScreen(state, onRoundEnd);
 }
