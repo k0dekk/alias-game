@@ -1,0 +1,60 @@
+{
+  "app": {
+    "title": "Alias",
+    "headerTitle": "Alias Game"
+  },
+  "language": {
+    "label": "Мова",
+    "uk": "Українська",
+    "en": "English"
+  },
+  "difficulties": {
+    "easy": "Легкий",
+    "medium": "Середній",
+    "hard": "Важкий",
+    "mixed": "Змішаний"
+  },
+  "categories": {
+    "all": "Усі категорії"
+  },
+  "startScreen": {
+    "startButton": "Почати гру"
+  },
+  "settingsScreen": {
+    "title": "Налаштування гри",
+    "difficulty": "Складність:",
+    "teamCount": "Кількість команд:",
+    "categories": "Категорії:",
+    "categoriesPlaceholder": "Категорії",
+    "targetScore": "Бали для перемоги:",
+    "roundTime": "Час раунду:",
+    "begin": "Почати",
+    "teamPlaceholder": "Команда {number}",
+    "modalTitle": "Обери категорії",
+    "cancel": "Скасувати",
+    "confirm": "Обрати"
+  },
+  "gameScreen": {
+    "round": "Раунд {current} / {total}",
+    "passDevice": "Передайте пристрій іншій команді.",
+    "pointsShort": "очок",
+    "secondsShort": "сек",
+    "correct": "✓ Вгадали!",
+    "skip": "✗ Пропустити"
+  },
+  "resultScreen": {
+    "gameOver": "Кінець гри",
+    "timeOver": "Час вийшов",
+    "team": "Команда:",
+    "totalScore": "Загальний рахунок:",
+    "roundWords": "Слова цього раунду:",
+    "noWords": "Жодного слова",
+    "scoreboard": "Рахунок:",
+    "newGame": "Нова гра",
+    "nextTeam": "Наступна команда",
+    "finalTitle": "Кінець гри!",
+    "winner": "Перемагає: {name}",
+    "summary": "Підсумки:",
+    "playAgain": "Грати знову"
+  }
+}

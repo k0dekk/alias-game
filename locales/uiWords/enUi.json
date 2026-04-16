@@ -1,0 +1,61 @@
+{
+  "app": {
+    "title": "Alias",
+    "headerTitle": "Alias Game"
+  },
+  "language": {
+    "label": "Language",
+    "uk": "Українська",
+    "en": "English"
+  },
+  "difficulties": {
+    "easy": "Easy",
+    "medium": "Medium",
+    "hard": "Hard",
+    "mixed": "Mixed"
+  },
+  "categories": {
+    "all": "All categories"
+
+  },
+  "startScreen": {
+    "startButton": "Start Game"
+  },
+  "settingsScreen": {
+    "title": "Game Settings",
+    "difficulty": "Difficulty:",
+    "teamCount": "Teams count:",
+    "categories": "Categories:",
+    "categoriesPlaceholder": "Categories",
+    "targetScore": "Points to win:",
+    "roundTime": "Round time:",
+    "begin": "Start",
+    "teamPlaceholder": "Team {number}",
+    "modalTitle": "Choose categories",
+    "cancel": "Cancel",
+    "confirm": "Apply"
+  },
+  "gameScreen": {
+    "round": "Round {current} / {total}",
+    "passDevice": "Pass the device to the next team.",
+    "pointsShort": "pts",
+    "secondsShort": "sec",
+    "correct": "✓ Guessed!",
+    "skip": "✗ Skip"
+  },
+  "resultScreen": {
+    "gameOver": "Game Over",
+    "timeOver": "Time is up",
+    "team": "Team:",
+    "totalScore": "Total score:",
+    "roundWords": "Words this round:",
+    "noWords": "No words",
+    "scoreboard": "Scoreboard:",
+    "newGame": "New game",
+    "nextTeam": "Next team",
+    "finalTitle": "Game Over!",
+    "winner": "Winner: {name}",
+    "summary": "Final results:",
+    "playAgain": "Play again"
+  }
+}
