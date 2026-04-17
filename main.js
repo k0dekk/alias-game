@@ -30,8 +30,8 @@ function goToSettings() {
   renderCurrentScreen();
 }
 
-function startGame({ teams, difficulty, selectedCategories }) {
-  state = createGame({ teams, difficulty, selectedCategories });
+function startGame({ teams, difficulty }) {
+  state = createGame({ teams, difficulty });
   stopTimer();
   currentScreen = "game";
   renderCurrentScreen();
@@ -48,4 +48,13 @@ function restart() {
   renderCurrentScreen();
 }
 
-renderCurrentScreen();
+function init() {
+  document.getElementById("languageSelect")
+    ?.addEventListener("change", (e) => setLanguage(e.target.value));
+
+  onLanguageChange(() => renderCurrentScreen());
+
+  renderCurrentScreen();
+}
+
+init();
