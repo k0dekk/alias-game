@@ -48,6 +48,6 @@ export function getWords() {
   return allWords.map(item => ({
     category: item.category,
     level: item.level,
-    word: item[currentLanguage] || item[FALLBACK_LANG] 
+    text: item[currentLanguage] || item[FALLBACK_LANG]
   }));
 }
