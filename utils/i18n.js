@@ -1,9 +1,7 @@
 import ukUi from "../locales/uiWords/ukUI.json";
 import enUi from "../locales/uiWords/enUi.json";
-import ukWords from "../locales/words/uk.json";
-import enWords from "../locales/words/en.json";
+import allWords from "../locales/words/uk.json"; 
 
-const WORDS_BY_LANG = { uk: ukWords, en: enWords };
 const UI_BY_LANG = { uk: ukUi, en: enUi };
 const FALLBACK_LANG = "uk";
 const STORAGE_KEY = "alias-lang";
@@ -47,5 +45,9 @@ export function onLanguageChange(cb) {
 }
 
 export function getWords() {
-  return WORDS_BY_LANG[currentLanguage] || WORDS_BY_LANG[FALLBACK_LANG];
+  return allWords.map(item => ({
+    category: item.category,
+    level: item.level,
+    word: item[currentLanguage] || item[FALLBACK_LANG] 
+  }));
 }
