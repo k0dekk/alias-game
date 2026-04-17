@@ -1,31 +1,30 @@
 import { render, $, on, fadeIn } from "../render.js";
 import { Timer } from "../../game/timer.js";
 import { DIFFICULTIES } from "../../game/config.js";
+import { t } from "../../utils/i18n.js";
 import {
   getCurrentTeam, nextWord, markWord, endRound,
 } from "../../game/gameState.js";
-import { t } from "../../utils/i18n.js";
 
 let timer = null;
 
 export function showReadyScreen(state, onRoundStart) {
   const team = getCurrentTeam(state);
-  const cfg  = DIFFICULTIES[state.difficulty];
   const roundNum = state.totalRounds - state.rounds + 1;
 
   render(`
     <div>
-      <p>${cfg.label}</p>
-      <p>Раунд ${roundNum} / ${state.totalRounds}</p>
+      <p>${t(`difficulties.${state.difficulty}`)}</p>
+      <p>${t("gameScreen.round", { current: roundNum, total: state.totalRounds })}</p>
       <h2>${team.name}</h2>
-      <p>Передайте пристрій іншій команді.</p>
+      <p>${t("gameScreen.passDevice")}</p>
       <div>
-        ${state.teams.map(t => `
-          <span>${t.name}: ${t.score} очок</span><br>
+        ${state.teams.map(teamItem => `
+          <span>${teamItem.name}: ${teamItem.score} ${t("gameScreen.pointsShort")}</span><br>
         `).join("")}
       </div>
       <br>
-      <button id="readyBtn">Почати!</button>
+      <button id="readyBtn">${t("settingsScreen.begin")}!</button>
     </div>
   `);
 
@@ -40,14 +39,14 @@ export function showGameScreen(state, onRoundEnd) {
 
   render(`
     <div>
-      <p>${team.name} | <span id="timerVal">${cfg.time}</span> сек | <span id="roundScore">0</span> очок</p>
+      <p>${team.name} | <span id="timerVal">${cfg.time}</span> ${t("gameScreen.secondsShort")} | <span id="roundScore">0</span> ${t("gameScreen.pointsShort")}</p>
       <hr>
-      <h1 id="wordText">${word.uk}</h1>
+      <h1 id="wordText">${word.text}</h1>
       <hr>
       <div class="btn-row">
-      <button id="btnCorrect">✓ Вгадали!</button>
+      <button id="btnCorrect">${t("gameScreen.correct")}</button>
       &nbsp;
-      <button id="btnWrong">✗ Пропустити</button>
+      <button id="btnWrong">${t("gameScreen.skip")}</button>
       </div>
       <hr>
       <div id="guessedList"></div>
@@ -60,13 +59,13 @@ export function showGameScreen(state, onRoundEnd) {
 
   function updateWord() {
     const w = nextWord(state);
-    $("#wordText").textContent = w.uk;
+    $("#wordText").textContent = w.text;
   }
 
   function addToList(word, guessed) {
     const list = $("#guessedList");
     const item = document.createElement("div");
-    item.textContent = `${guessed ? "✓" : "✗"} ${word.uk}`;
+    item.textContent = `${guessed ? "✓" : "✗"} ${word.text}`;
     list.prepend(item);
   }
 
