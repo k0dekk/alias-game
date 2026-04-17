@@ -7,6 +7,7 @@ const WORDS_BY_LANG = { uk: ukWords, en: enWords };
 const UI_BY_LANG = { uk: ukUi, en: enUi };
 const FALLBACK_LANG = "uk";
 const STORAGE_KEY = "alias-lang";
+const listeners = new Set();
 
 let currentLanguage = localStorage.getItem(STORAGE_KEY) || FALLBACK_LANG;
 if (!UI_BY_LANG[currentLanguage]) currentLanguage = FALLBACK_LANG;
@@ -37,6 +38,12 @@ export function setLanguage(lang) {
   currentLanguage = lang;
   document.documentElement.lang = lang;
   localStorage.setItem(STORAGE_KEY, lang);
+  listeners.forEach(cb => cb(lang));
+}
+
+export function onLanguageChange(cb) {
+  listeners.add(cb);
+  return () => listeners.delete(cb);
 }
 
 export function getWords() {
