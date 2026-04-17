@@ -5,12 +5,12 @@ import { t } from "../../utils/i18n.js";
 export function showSettingsScreen(onStart) {
   let selectedDifficulty = "medium";
   let teamCount = 2;
-  const teamNames = ["Команда 1", "Команда 2"];
+  const teamNames = [t("settingsScreen.teamPlaceholder", { number: 1 }), t("settingsScreen.teamPlaceholder", { number: 2 })];
   let selectedCategory = "all";
   let targetScore = 30;
   let roundTime = 60;
 
-  let selectedCategories = CATEGORIES.map(c => c.id);
+  let selectedCategories = ["all"];
   let tempSelectedCategories = [];
   let isModalOpen = false;
 
@@ -19,24 +19,24 @@ export function showSettingsScreen(onStart) {
   function renderPage() {
     const selectedLabels = CATEGORIES
       .filter(c => selectedCategories.includes(c.id))
-      .map(c => c.label)
+      .map(c => t(`categories.${c.id}`))
       .join(", ");
     
     render(`
       <div>
-        <h1>Налаштування гри</h1>
+        <h1>${t("settingsScreen.title")}</h1>
         <hr>
 
-        <h3>Складність:</h3>
-        ${Object.entries(DIFFICULTIES).map(([key, d]) => `
+        <h3>${t("settingsScreen.difficulty")}</h3>
+        ${Object.entries(DIFFICULTIES).map(([key]) => `
           <button class="diff-btn ${key === selectedDifficulty ? "active" : ""}"
                   data-key="${key}">
-            ${d.label}
+            ${t(`difficulties.${key}`)}
           </button>
         `).join(" ")}
 
         <hr>
-        <h3>Кількість команд:</h3>
+        <h3>${t("settingsScreen.teamCount")}</h3>
         <button id="teamMinus">−</button>
         <span id="teamCountVal">${teamCount}</span>
         <button id="teamPlus">+</button>
@@ -46,33 +46,33 @@ export function showSettingsScreen(onStart) {
         </div>
 
         <hr>
-        <h3>Категорії:</h3>
-        <button id="openCategoriesBtn">${selectedLabels || "Категорії"}</button>
+        <h3>${t("settingsScreen.categories")}</h3>
+        <button id="openCategoriesBtn">${selectedLabels || t("settingsScreen.categoriesPlaceholder")}</button>
 
-        <h3>Бали для перемоги:</h3>
+        <h3>${t("settingsScreen.targetScore")}</h3>
         <input id="targetScoreInput" type="number" min="1" value="${targetScore}" disabled />
 
-        <h3>Час раунду:</h3>
+        <h3>${t("settingsScreen.roundTime")}</h3>
         <input id="roundTimeInput" type="number" min="10" value="${roundTime}" disabled />
 
         <hr>
-        <button id="beginGameBtn">Почати</button>
+        <button id="beginGameBtn">${t("settingsScreen.begin")}</button>
       </div>
 
       ${isModalOpen ? `
         <div class="modal-overlay" id="catModal">
           <div class="modal-content">
-            <h2>Обери категорії</h2>
+            <h2>${t("settingsScreen.modalTitle")}</h2>
             <div class="categories-grid">
               ${CATEGORIES.map(c => `
                 <div class="cat-box ${tempSelectedCategories.includes(c.id) ? "selected" : ""}" data-id="${c.id}">
-                  ${c.label}
+                  ${t(`categories.${c.id}`)}
                 </div>
               `).join("")}
             </div>
             <div class="modal-actions">
-              <button id="cancelCatBtn">Скасувати</button>
-              <button id="confirmCatBtn">Обрати</button>
+              <button id="cancelCatBtn">${t("settingsScreen.cancel")}</button>
+              <button id="confirmCatBtn">${t("settingsScreen.confirm")}</button>
             </div>
           </div>
         </div>
@@ -89,7 +89,7 @@ export function showSettingsScreen(onStart) {
       <div>
         <label>${i + 1}. </label>
         <input class="team-input" type="text"
-               placeholder="Команда ${i + 1}"
+               placeholder="${t("settingsScreen.teamPlaceholder", { number: i + 1 })}"
                value="${names[i] || ""}"
                data-idx="${i}" maxlength="20"/>
       </div>
@@ -114,7 +114,7 @@ export function showSettingsScreen(onStart) {
     on("#teamPlus", "click", () => {
       if (teamCount < MAX_TEAMS) {
         teamCount++;
-        if (!teamNames[teamCount - 1]) teamNames[teamCount - 1] = `Команда ${teamCount}`;
+        if (!teamNames[teamCount - 1]) teamNames[teamCount - 1] = t("settingsScreen.teamPlaceholder", { number: teamCount });
         renderPage();
       }
     });
@@ -158,13 +158,13 @@ export function showSettingsScreen(onStart) {
 
     on("#beginGameBtn", "click", () => {
       const names = Array.from({ length: teamCount }, (_, i) =>
-        teamNames[i]?.trim() || `Команда ${i + 1}`
+        teamNames[i]?.trim() || t("settingsScreen.teamPlaceholder", { number: i + 1 })
       );
 
       onStart({
         teams: names,
         difficulty: selectedDifficulty,
-        selectedCategories: [...selectedCategories],
+        category: selectedCategory,
         targetScore,
         roundTime,
       });
