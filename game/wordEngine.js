@@ -1,4 +1,4 @@
-import wordsData from "../words/uk.json";
+import wordsData from "../locales/words/uk.json";
 import { PriorityWordQueue } from "../utils/PriorityWordQueue.js";
 
 export function shuffle(arr) {
