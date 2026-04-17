@@ -7,24 +7,24 @@ export function showRoundEndScreen(state, result, onNext) {
 
   render(`
     <div>
-      <h2>${isGameOver ? "Кінець гри" : "Час вийшов"}</h2>
-      <p>Команда: <strong>${result.team.name}</strong></p>
-      <p>Загальний рахунок: <strong>${result.team.score}</strong></p>
+      <h2>${isGameOver ? t("resultScreen.gameOver") : t("resultScreen.timeOver")}</h2>
+      <p>${t("resultScreen.team")} <strong>${result.team.name}</strong></p>
+      <p>${t("resultScreen.totalScore")} <strong>${result.team.score}</strong></p>
 
-      <h3>Слова цього раунду:</h3>
+      <h3>${t("resultScreen.roundWords")}</h3>
       ${result.words.map(w => `
         <div>${w.guessed ? "✓" : "✗"} ${w.word}</div>
-      `).join("") || "<p>Жодного слова</p>"}
+      `).join("") || `<p>${t("resultScreen.noWords")}</p>`}
 
       <hr>
-      <h3>Рахунок:</h3>
+      <h3>${t("resultScreen.scoreboard")}</h3>
       ${[...state.teams]
         .sort((a, b) => b.score - a.score)
-        .map((t, i) => `<div>${i + 1}. ${t.name} — ${t.score} очок</div>`)
+        .map((team, i) => `<div>${i + 1}. ${team.name} — ${team.score} ${t("gameScreen.pointsShort")}</div>`)
         .join("")}
 
       <hr>
-      <button id="nextBtn">${isGameOver ? "Нова гра" : "Наступна команда"}</button>
+      <button id="nextBtn">${isGameOver ? t("resultScreen.newGame") : t("resultScreen.nextTeam")}</button>
     </div>
   `);
 
@@ -38,16 +38,16 @@ export function showGameOverScreen(state, onRestart) {
 
   render(`
     <div>
-      <h1>🎉 Кінець гри!</h1>
-      <h2>Перемагає: ${winner.name}</h2>
-      <p>${winner.score} очок</p>
+      <h1>${t("resultScreen.finalTitle")}</h1>
+      <h2>${t("resultScreen.winner", { name: winner.name })}</h2>
+      <p>${winner.score} ${t("gameScreen.pointsShort")}</p>
       <hr>
-      <h3>Підсумки:</h3>
-      ${sorted.map((t, i) => `
-        <div>${["1","2","3"][i] || (i+1)+"."} ${t.name} — ${t.score} очок</div>
+      <h3>${t("resultScreen.summary")}</h3>
+      ${sorted.map((teamItem, i) => `
+        <div>${["1","2","3"][i] || (i+1)+"."} ${teamItem.name} — ${teamItem.score} ${t("gameScreen.pointsShort")}</div>
       `).join("")}
       <hr>
-      <button id="restartBtn">Грати знову</button>
+      <button id="restartBtn">${t("resultScreen.playAgain")}</button>
     </div>
   `);
 
