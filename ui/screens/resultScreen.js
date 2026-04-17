@@ -1,5 +1,6 @@
 import { render, on, fadeIn } from "../render.js";
 import { getWinner } from "../../game/gameState.js";
+import { t } from "../../utils/i18n.js";
 
 export function showRoundEndScreen(state, result, onNext) {
   const isGameOver = state.phase === "gameOver";

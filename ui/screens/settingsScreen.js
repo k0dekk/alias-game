@@ -1,5 +1,6 @@
 import { render, $, $$, on, fadeIn } from "../render.js";
 import { DIFFICULTIES, CATEGORIES, MIN_TEAMS, MAX_TEAMS } from "../../game/config.js";
+import { t } from "../../utils/i18n.js";
 
 export function showSettingsScreen(onStart) {
   let selectedDifficulty = "medium";

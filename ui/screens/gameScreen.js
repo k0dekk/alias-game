@@ -4,6 +4,7 @@ import { DIFFICULTIES } from "../../game/config.js";
 import {
   getCurrentTeam, nextWord, markWord, endRound,
 } from "../../game/gameState.js";
+import { t } from "../../utils/i18n.js";
 
 let timer = null;
 
