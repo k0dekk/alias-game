@@ -15,7 +15,18 @@
     "mixed": "Змішаний"
   },
   "categories": {
-    "all": "Усі категорії"
+    "all": "Усі категорії",
+    "animals": "Animals" ,
+    "food": "Їжа",
+    "home": "Дім",
+    "nature":"Природа",
+    "places":"Місця",
+    "professions":"Професії",
+    "things_and_devices":"Речі",
+    "events":"Події",
+    "abstractions":"Абстракції",
+    "science":"Наука",
+    "society":"Суспільство"
   },
   "startScreen": {
     "startButton": "Почати гру"

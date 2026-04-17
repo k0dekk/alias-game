@@ -6,17 +6,17 @@ export const DIFFICULTIES = {
 };
 
 export const CATEGORIES = [
-  { id: "animals", label: "Тварини" },
-  { id: "food", label: "Їжа" },
-  { id: "home", label: "Дім" },
-  { id: "nature", label: "Природа" },
-  { id: "places", label: "Місця" },
-  { id: "professions", label: "Професії" },
-  { id: "things_and_devices", label: "Речі та пристрої" },
-  { id: "events", label: "Події" },
-  { id: "abstractions", label: "Абстракції" },
-  { id: "science", label: "Наука" },
-  { id: "society", label: "Суспільство" },
+  { id: "animals"},
+  { id: "food"},
+  { id: "home"},
+  { id: "nature"},
+  { id: "places"},
+  { id: "professions"},
+  { id: "things_and_devices"},
+  { id: "events"},
+  { id: "abstractions"},
+  { id: "science"},
+  { id: "society"},
 ];
 
 

@@ -15,7 +15,18 @@
     "mixed": "Mixed"
   },
   "categories": {
-    "all": "All categories"
+    "all": "All categories",
+    "animals": "Animals" ,
+    "food": "Food",
+    "home": "Home",
+    "nature":"Nature",
+    "places":"Places",
+    "professions":"Professions",
+    "things_and_devices":"Things and devices",
+    "events":"Events",
+    "abstractions":"Abstraction",
+    "science":"Science",
+    "society":"Society"
 
   },
   "startScreen": {
