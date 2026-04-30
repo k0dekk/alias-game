@@ -1,20 +1,32 @@
 import "./styles/main.css";
-import { showStartScreen }         from "./ui/screens/startScreen.js";
-import { showSettingsScreen }      from "./ui/screens/settingsScreen.js";
+import { showStartScreen }           from "./ui/screens/startScreen.js";
+import { showSettingsScreen }        from "./ui/screens/settingsScreen.js";
 import { showGameScreen, stopTimer } from "./ui/screens/gameScreen.js";
-import { showGameOverScreen }      from "./ui/screens/resultScreen.js";
-import { createGame }              from "./game/gameState.js";
+import { showGameOverScreen }        from "./ui/screens/resultScreen.js";
+import { createGame }                from "./game/gameState.js";
 import { getLanguage, setLanguage, t, onLanguageChange } from "./utils/i18n.js";
+import { showLoginScreen }           from "./ui/screens/loginScreen.js";
+import { showRegisterScreen }        from "./ui/screens/registerScreen.js";
+import { showProfileScreen }         from "./ui/screens/profileScreen.js";
 
 let state = null;
 let currentScreen = "start";
+let isLoggedIn = false;
 
 function syncUI() {
   document.title = t("app.title");
+  
   const sel = document.getElementById("languageSelect");
-  if (!sel) return;
-  sel.value = getLanguage();
-  sel.style.display = currentScreen === "start" ? "inline-block" : "none";
+  const accBtn = document.getElementById("headerAccountBtn");
+  
+  if (sel) {
+    sel.value = getLanguage();
+    sel.style.display = currentScreen === "start" ? "inline-block" : "none";
+  }
+
+  if (accBtn) {
+    accBtn.style.display = currentScreen === "start" ? "inline-block" : "none";
+  }
 }
 
 function renderCurrentScreen() {
@@ -51,6 +63,9 @@ function restart() {
 function init() {
   document.getElementById("languageSelect")
     ?.addEventListener("change", (e) => setLanguage(e.target.value));
+
+  document.getElementById("headerAccountBtn")
+    ?.addEventListener("click", handleAccountClick);
 
   onLanguageChange(() => renderCurrentScreen());
 
