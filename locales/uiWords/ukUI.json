@@ -16,17 +16,17 @@
   },
   "categories": {
     "all": "Усі категорії",
-    "animals": "Animals" ,
+    "animals": "Тварини",
     "food": "Їжа",
     "home": "Дім",
-    "nature":"Природа",
-    "places":"Місця",
-    "professions":"Професії",
-    "things_and_devices":"Речі",
-    "events":"Події",
-    "abstractions":"Абстракції",
-    "science":"Наука",
-    "society":"Суспільство"
+    "nature": "Природа",
+    "places": "Місця",
+    "professions": "Професії",
+    "things_and_devices": "Речі",
+    "events": "Події",
+    "abstractions": "Абстракції",
+    "science": "Наука",
+    "society": "Суспільство"
   },
   "startScreen": {
     "startButton": "Почати гру"
@@ -67,5 +67,29 @@
     "winner": "Перемагає: {name}",
     "summary": "Підсумки:",
     "playAgain": "Грати знову"
+  },
+  "header": {
+    "accountButton": "Акаунт"
+  },
+  "auth": {
+    "loginTitle": "Вхід",
+    "emailPlaceholder": "Email",
+    "passwordPlaceholder": "Пароль",
+    "loginButton": "Увійти",
+    "noAccountText": "Ще немає акаунта? ",
+    "registerLink": "Зареєструватись",
+    "backButton": "Назад",
+    "registerTitle": "Реєстрація",
+    "usernamePlaceholder": "Ім'я користувача",
+    "registerButton": "Зареєструватись",
+    "hasAccountText": "Вже є акаунт? ",
+    "loginLink": "Увійти"
+  },
+  "profile": {
+    "registeredSince": "Акаунт зареєстрований з: ",
+    "guessedWords": "Вгаданих слів: ",
+    "skippedWords": "Пропущених слів: ",
+    "backToMenu": "Назад в меню",
+    "logout": "Вийти"
   }
 }

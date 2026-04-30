@@ -16,18 +16,17 @@
   },
   "categories": {
     "all": "All categories",
-    "animals": "Animals" ,
+    "animals": "Animals",
     "food": "Food",
     "home": "Home",
-    "nature":"Nature",
-    "places":"Places",
-    "professions":"Professions",
-    "things_and_devices":"Things and devices",
-    "events":"Events",
-    "abstractions":"Abstraction",
-    "science":"Science",
-    "society":"Society"
-
+    "nature": "Nature",
+    "places": "Places",
+    "professions": "Professions",
+    "things_and_devices": "Things and devices",
+    "events": "Events",
+    "abstractions": "Abstraction",
+    "science": "Science",
+    "society": "Society"
   },
   "startScreen": {
     "startButton": "Start Game"
@@ -68,5 +67,29 @@
     "winner": "Winner: {name}",
     "summary": "Final results:",
     "playAgain": "Play again"
+  },
+  "header": {
+    "accountButton": "Account"
+  },
+  "auth": {
+    "loginTitle": "Login",
+    "emailPlaceholder": "Email",
+    "passwordPlaceholder": "Password",
+    "loginButton": "Log in",
+    "noAccountText": "Don't have an account? ",
+    "registerLink": "Register",
+    "backButton": "Back",
+    "registerTitle": "Registration",
+    "usernamePlaceholder": "Username",
+    "registerButton": "Sign up",
+    "hasAccountText": "Already have an account? ",
+    "loginLink": "Log in"
+  },
+  "profile": {
+    "registeredSince": "Account registered since: ",
+    "guessedWords": "Guessed words: ",
+    "skippedWords": "Skipped words: ",
+    "backToMenu": "Back to menu",
+    "logout": "Log out"
   }
 }
