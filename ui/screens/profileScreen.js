@@ -1,4 +1,5 @@
 import { render, on, fadeIn } from "../render.js";
+import { t } from "../../utils/i18n.js";
 
 export function showProfileScreen(onBack, onLogout, userData = null) {
   const user = userData || {
@@ -13,7 +14,6 @@ export function showProfileScreen(onBack, onLogout, userData = null) {
       
       <div class="profile-header" style="display: flex; align-items: center; gap: 20px; margin-bottom: 40px;">
         <div class="avatar" style="width: 80px; height: 80px; border-radius: 50%; border: 3px solid #000; display: flex; align-items: center; justify-content: center; overflow: hidden;">
-          <!-- Проста SVG іконка користувача (як на малюнку) -->
           <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
             <circle cx="12" cy="7" r="4"></circle>
@@ -25,14 +25,14 @@ export function showProfileScreen(onBack, onLogout, userData = null) {
       </div>
       
       <div class="profile-stats" style="display: flex; flex-direction: column; gap: 15px; font-size: 1.1rem;">
-        <div>Акаунт зареєстрований з: <strong>${user.registeredSince}</strong></div>
-        <div>Вгаданих слів: <strong>${user.guessedWords}</strong></div>
-        <div>Пропущених слів: <strong>${user.skippedWords}</strong></div>
+        <div>${t("profile.registeredSince")}<strong>${user.registeredSince}</strong></div>
+        <div>${t("profile.guessedWords")}<strong>${user.guessedWords}</strong></div>
+        <div>${t("profile.skippedWords")}<strong>${user.skippedWords}</strong></div>
       </div>
 
       <div class="profile-actions" style="margin-top: 40px; display: flex; gap: 10px;">
-        <button id="backBtn">Назад в меню</button>
-        <button id="logoutBtn" style="background-color: #ff4d4d; color: white;">Вийти</button>
+        <button id="backBtn">${t("profile.backToMenu")}</button>
+        <button id="logoutBtn" style="background-color: #ff4d4d; color: white;">${t("profile.logout")}</button>
       </div>
     </div>
   `);

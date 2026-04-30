@@ -1,22 +1,23 @@
 import { render, on, fadeIn } from "../render.js";
+import { t } from "../../utils/i18n.js";
 
 export function showRegisterScreen(onRegisterSuccess, onGoToLogin, onBack) {
   render(`
     <div class="auth-container">
-      <h2>Реєстрація</h2>
+      <h2>${t("auth.registerTitle")}</h2>
       <form id="registerForm" style="display: flex; flex-direction: column; gap: 10px; max-width: 300px; margin: 0 auto;">
-        <input type="text" id="username" placeholder="Ім'я користувача" required />
-        <input type="text" id="email" placeholder="Email" required />
-        <input type="text" id="password" placeholder="Пароль" required />
-        <button type="submit" id="registerBtn">Зареєструватись</button>
+        <input type="text" id="username" placeholder="${t("auth.usernamePlaceholder")}" required />
+        <input type="email" id="email" placeholder="${t("auth.emailPlaceholder")}" required />
+        <input type="password" id="password" placeholder="${t("auth.passwordPlaceholder")}" required />
+        <button type="submit" id="registerBtn">${t("auth.registerButton")}</button>
       </form>
       
       <div style="margin-top: 15px;">
-        <span style="font-size: 14px;">Вже є акаунт? </span>
-        <a href="#" id="toLoginBtn" style="font-size: 14px; color: blue; text-decoration: underline;">Увійти</a>
+        <span style="font-size: 14px;">${t("auth.hasAccountText")}</span>
+        <a href="#" id="toLoginBtn" style="font-size: 14px; color: blue; text-decoration: underline;">${t("auth.loginLink")}</a>
       </div>
       
-      <button id="backBtn" style="margin-top: 20px;">Назад</button>
+      <button id="backBtn" style="margin-top: 20px;">${t("auth.backButton")}</button>
     </div>
   `);
 
@@ -24,7 +25,6 @@ export function showRegisterScreen(onRegisterSuccess, onGoToLogin, onBack) {
 
   on("#registerForm", "submit", (e) => {
     e.preventDefault();
-
     onRegisterSuccess();
   });
 
