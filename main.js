@@ -13,28 +13,73 @@ let state = null;
 let currentScreen = "start";
 let isLoggedIn = false;
 
-function syncUI() {
-  document.title = t("app.title");
-  
-  const sel = document.getElementById("languageSelect");
+function showHeaderControls() {
+  const langSel = document.getElementById("languageSelect");
   const accBtn = document.getElementById("headerAccountBtn");
   
-  if (sel) {
-    sel.value = getLanguage();
-    sel.style.display = currentScreen === "start" ? "inline-block" : "none";
-  }
+  if (langSel) langSel.style.display = "inline-block";
+  if (accBtn) accBtn.style.display = "inline-block";
+}
 
-  if (accBtn) {
-    accBtn.style.display = currentScreen === "start" ? "inline-block" : "none";
-  }
+function hideHeaderControls() {
+  const langSel = document.getElementById("languageSelect");
+  const accBtn = document.getElementById("headerAccountBtn");
+  
+  if (langSel) langSel.style.display = "none";
+  if (accBtn) accBtn.style.display = "none";
+}
+
+function syncUI() {
+  document.title = t("app.title");
+  const sel = document.getElementById("languageSelect");
+  if (sel) sel.value = getLanguage();
 }
 
 function renderCurrentScreen() {
   syncUI();
-  if (currentScreen === "settings")              return showSettingsScreen(startGame);
-  if (currentScreen === "game" && state)         return showGameScreen(state, onRoundEnd);
-  if (currentScreen === "gameOver" && state)     return showGameOverScreen(state, restart);
+
+  if (currentScreen === "start") {
+    showHeaderControls();
+  } else {
+    hideHeaderControls();
+  }
+
+  if (currentScreen === "settings")          return showSettingsScreen(startGame);
+  if (currentScreen === "game" && state)     return showGameScreen(state, onRoundEnd);
+  if (currentScreen === "gameOver" && state) return showGameOverScreen(state, restart);
+  
+  if (currentScreen === "login") {
+    return showLoginScreen(
+      () => { isLoggedIn = true; currentScreen = "profile"; renderCurrentScreen(); }, 
+      () => { currentScreen = "register"; renderCurrentScreen(); },                  
+      () => { currentScreen = "start"; renderCurrentScreen(); }                      
+    );
+  }
+  
+  if (currentScreen === "register") {
+    return showRegisterScreen(
+      () => { isLoggedIn = true; currentScreen = "profile"; renderCurrentScreen(); }, 
+      () => { currentScreen = "login"; renderCurrentScreen(); },                     
+      () => { currentScreen = "start"; renderCurrentScreen(); }                      
+    );
+  }
+
+  if (currentScreen === "profile") {
+    return showProfileScreen(
+      () => { currentScreen = "start"; renderCurrentScreen(); }, 
+      () => { isLoggedIn = false; currentScreen = "start"; renderCurrentScreen(); } 
+    );
+  }
   showStartScreen(goToSettings);
+}
+
+function handleAccountClick() {
+  if (isLoggedIn) {
+    currentScreen = "profile";
+  } else {
+    currentScreen = "login";
+  }
+  renderCurrentScreen();
 }
 
 function goToSettings() {
