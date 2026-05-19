@@ -1,9 +1,9 @@
 import { t } from "../utils/i18n.js";
 
 const CARD_KEYS = [
-  { categoryKey: "animals", cls: "card--animals", gif: "../assets/animals.gif" },
-  { categoryKey: "food", cls: "card--food", gif: "../assets/food.gif" },
-  { categoryKey: "nature", cls: "card--nature", gif: "../assets/nature.gif" },
+  { categoryKey: "animals", cls: "card--animals", gif: `${import.meta.env.BASE_URL}assets/animals.gif` },
+  { categoryKey: "food", cls: "card--food", gif: `${import.meta.env.BASE_URL}assets/food.gif` },
+  { categoryKey: "nature", cls: "card--nature", gif: `${import.meta.env.BASE_URL}assets/nature.gif` },
 ];
 
 export function initCardRotator() {

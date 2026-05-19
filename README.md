@@ -55,6 +55,49 @@ Choose your language to read the rules:
 
 ---
 
+## How to Run
+
+Follow these steps to clone, configure, and run the project locally on your machine.
+
+### 1. Clone the Repository
+
+First, clone this repository and navigate into the project directory:
+
+~~~bash
+git clone https://github.com/k0dekk/alias-game.git
+cd alias-game
+~~~
+
+### 2. Install Dependencies
+The project uses npm and Vite as a build tool. Install all required dependencies (including the Firebase SDK) by running:
+
+~~~bash
+npm install
+~~~
+### 3. Configure Firebase (Environment Variables)
+To secure your Firebase configuration keys for authentication, statistics storage, and image uploads, create a .env file in the root directory of the project:
+
+~~~Bash
+touch .env
+~~~
+Open the .env file and add your Firebase project configuration credentials. Since this is a Vite-powered project, all custom environment variables must be prefixed with VITE_:  
+
+~~~bash
+VITE_FIREBASE_API_KEY=your_api_key_here
+VITE_FIREBASE_AUTH_DOMAIN=your_auth_domain_here
+VITE_FIREBASE_PROJECT_ID=your_project_id_here
+VITE_FIREBASE_STORAGE_BUCKET=your_storage_bucket_here
+VITE_FIREBASE_MESSAGING_SENDER_ID=your_messaging_sender_id_here
+VITE_FIREBASE_APP_ID=your_app_id_here
+~~~
+
+## or
+
+[Github Pages](https://k0dekk.github.io/alias-game/)
+
+
+---
+
 ## 🚀 Key Features & Engineering Insights
 
 This project served as a massive learning milestone. While building this SPA, I dove deep into advanced architectural patterns and modern frontend/backend techniques. Here is a glimpse of what was mastered and implemented:
@@ -78,6 +121,6 @@ you can find the direct links to the laboratory assignments implemented within t
 * [Task 4: Implementing a Bi-Directional Priority Queue] - [here](https://github.com/k0dekk/alias-game/tree/main/utils/queue)
 * [Task 5: Async Array Function Variants] - [here](https://github.com/k0dekk/alias-game/tree/main/utils/asyncSome)
 * [Task 6: Large Data Processing with Streams or Async Iterators] - [here](https://github.com/k0dekk/alias-game/tree/main/utils/stream)
-* [Task 7: Reactive Communication with Observables or EventEmitters] - [here](https://github.com/k0dekk/alias-game/blob/main/ui/observers.js)
+* [Task 7: Reactive Communication with Observables or EventEmitters] - [here](https://github.com/k0dekk/alias-game/blob/main/ui/observer)
 * [Task 8: Implementing an Authentication Proxy for an API Service] - [here](https://github.com/k0dekk/alias-game/tree/main/utils/proxy)
 * [Task 9: Implementing a Logging Decorator with Configurable Log Levels] - [here](https://github.com/k0dekk/alias-game/tree/main/utils/logger)
