@@ -21,6 +21,8 @@ class EventEmitter {
   }
 }
 
+export const uiEventBus = new EventEmitter();
+
 export function initObservers() {
   const heroTitle = document.getElementById("hero-title");
   if (heroTitle) {
@@ -37,7 +39,7 @@ export function initObservers() {
     });
   }
 
-  const scrollButton = document.querySelector(".button-with-icon"); // Тимчасова заглушка в HTML
+  const scrollButton = document.querySelector(".button-with-icon");
   let unsubscribeButton = null;
 
     if (scrollButton) {
@@ -55,5 +57,3 @@ export function initObservers() {
     if (unsubscribeButton) unsubscribeButton();
   };
 }
-
-export const uiEventBus = new EventEmitter();
