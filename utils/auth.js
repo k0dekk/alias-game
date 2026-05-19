@@ -6,6 +6,10 @@ import {
 } from "firebase/auth";
 import { auth } from "./firebase.js";
 
+export function subscribeAuth(callback) {
+  return onAuthStateChanged(auth, callback);
+}
+
 export async function registerWithEmail(email, password) {
   return createUserWithEmailAndPassword(auth, email.trim(), password);
 }
