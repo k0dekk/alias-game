@@ -1,0 +1,99 @@
+.difficulty-track {
+  position: relative;
+  border-radius: 14px;
+  height: 60px;
+  display: flex;
+  align-items: stretch !important;
+  justify-content: space-between;
+  padding: 0 !important;
+  overflow: hidden;
+  border: 2px solid #e2d5ce;
+  background: #f5f0ed;
+  transition: background 0.25s, border-color 0.25s, box-shadow 0.25s;
+}
+
+.difficulty-track.easy {
+  background: linear-gradient(135deg, #eaf8f0, #d5f5e3);
+  border-color: rgba(39, 174, 96, 0.45);
+  box-shadow: 0 3px 14px rgba(39, 174, 96, 0.18);
+}
+
+.difficulty-track.medium {
+  background: linear-gradient(135deg, #fefae8, #fef3c7);
+  border-color: rgba(243, 156, 18, 0.45);
+  box-shadow: 0 3px 14px rgba(243, 156, 18, 0.2);
+}
+
+.difficulty-track.hard {
+  background: linear-gradient(135deg, #fdf2f1, #fde0de);
+  border-color: rgba(231, 76, 60, 0.45);
+  box-shadow: 0 3px 14px rgba(231, 76, 60, 0.18);
+}
+
+.difficulty-track.mixed {
+  background: linear-gradient(135deg, #d5f5e3, #fef3c7, #fde0de);
+  border-color: rgba(120, 150, 80, 0.35);
+}
+
+.diff-arrow {
+  background: rgba(0, 0, 0, 0.074);
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 0;
+  width: 50px !important; 
+  margin: 0 !important;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.diff-arrow svg {
+  width: 32px !important; 
+  height: 32px !important;
+  stroke-width: 4px !important; 
+  stroke: white; 
+}
+
+.diff-label-wrap {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.diff-label.easy { color: #186a38; }
+.diff-label.medium { color: #7a5000; }
+.diff-label.hard { color: #8a1f18; }
+.diff-label.mixed {
+  background: linear-gradient(90deg, #186a38 0%, #7a5000 50%, #8a1f18 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.diff-label-wrap {
+  flex: 1;
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.diff-label {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  font-weight: 900; 
+  font-size: 22px; 
+}
+
+/* АНІМАЦІЇ ПЕРЕЛИСТУВАННЯ */
+@keyframes slideInRight  { from { transform: translateX(100%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+@keyframes slideInLeft   { from { transform: translateX(-100%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+@keyframes slideOutLeft  { from { transform: translateX(0); opacity: 1; } to { transform: translateX(-100%); opacity: 0; } }
+@keyframes slideOutRight { from { transform: translateX(0); opacity: 1; } to { transform: translateX(100%); opacity: 0; } }

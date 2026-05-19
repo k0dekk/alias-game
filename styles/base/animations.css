@@ -1,0 +1,21 @@
+@keyframes cursorBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.floating { animation: floatAnim 2s ease-in-out infinite; }
+.fly-down { animation: flyDownAnim 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) forwards; }
+.fall-from-top { animation: fallFromTopAnim 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; }
+
+@keyframes floatAnim {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+@keyframes flyDownAnim {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(110%) rotate(12deg); opacity: 0; }
+}
+@keyframes fallFromTopAnim {
+  0% { transform: translateY(-110%) rotate(-12deg); opacity: 0; }
+  100% { transform: translateY(0) rotate(0); opacity: 1; }
+}

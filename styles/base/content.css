@@ -1,0 +1,11 @@
+.content {
+  min-height: 80vh;
+  background: #fff;
+  display: flex; align-items: center; justify-content: center;
+}
+.content__inner {
+  display: flex; flex-direction: column; align-items: center;
+  transform: translateY(30px);
+  transition: opacity 0.55s ease-out, transform 0.55s ease-out;
+}
+.content__inner.visible { opacity: 1; transform: translateY(0); }

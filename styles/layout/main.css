@@ -1,5 +1,5 @@
-@import "../styles/modalWindow.css";
-@import "../styles/headerFooter.css";
+@import "/styles/components/modalWindow.css";
+@import "/styles/components/headerFooter.css";
 
 body {
   font-family: Arial, sans-serif;
@@ -32,23 +32,6 @@ button {
 button:hover {
   background-color: #e0e0e0;
 }
- 
-#btnCorrect {
-  background-color: #c8f7c5;
-  border-color: #5cb85c;
-}
- 
-#btnWrong {
-  background-color: #f7c5c5;
-  border-color: #d9534f;
-  display: block;
-  margin-left: auto;
-}
-
-.btn-row {
-  display: flex;
-  justify-content: space-between;
-}
 
 .diff-btn.active {
   background-color: #333;
@@ -69,20 +52,31 @@ hr {
   border-top: 1px solid #ccc;
   margin: 16px 0;
 }
- 
-#wordText {
-  text-align: center;
-  font-size: 2rem;
-  margin: 20px 0;
-  color: #222;
-}
- 
+
+/* Базові стилі для контейнера */
 #app {
+  width: 100%;
+}
+
+/* * Коли активний режим "contained" (Налаштування, Профіль, Гра, Авторизація), 
+ * робимо #app акуратною карткою по центру 
+ */
+.layout-contained #app {
   background: #fff;
   padding: 24px;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  width: 100%;
-  max-width: 600px;
+  max-width: 680px;
   margin: 20px auto;
+}
+
+/* * Коли активний режим "full" (Стартовий екран), 
+ * скидаємо всі обмеження, щоб екран розтягнувся на 100% 
+ */
+.layout-full #app {
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  box-shadow: none;
 }

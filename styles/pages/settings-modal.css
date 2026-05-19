@@ -1,0 +1,26 @@
+.settings-modal-content {
+  max-width: 520px;
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.settings-categories-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  justify-content: stretch;
+}
+
+.settings-categories-grid .cat-box {
+  width: 100%;
+  text-align: center;
+  background: #fff;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.settings-categories-grid .cat-box.selected {
+  border-color: var(--clr-accent);
+  background: #fff1e9;
+}

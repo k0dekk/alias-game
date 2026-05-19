@@ -1,0 +1,75 @@
+.hero {
+  margin-top: 0;
+  min-height: calc(100vh - var(--header-height) - var(--hero-peek));
+  background: linear-gradient(135deg, var(--clr-hero-from) 0%, var(--clr-hero-to) 100%);
+  display: flex; align-items: center;
+  position: relative; overflow: hidden;
+}
+.hero__left {
+  flex: 1; padding: 60px 56px;
+  display: flex; align-items: center; z-index: 1;
+}
+.hero__title {
+  font-size: clamp(68px, 11vw, 138px);
+  font-weight: 900; color: #fff;
+  letter-spacing: 0.06em; line-height: 1;
+  display: flex; align-items: center; white-space: nowrap;
+}
+.hero__cursor {
+  display: inline-block; width: max(4px, 0.5vw); height: 0.82em;
+  background: rgba(255,255,255,0.92); border-radius: 2px;
+  margin-left: 5px; vertical-align: middle; flex-shrink: 0;
+  animation: cursorBlink 1s step-end infinite;
+}
+.hero__right {
+  width: 50%; align-self: stretch;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; overflow: hidden;
+}
+.card-container { perspective: 1000px; }
+.animated-card {
+  width: 240px;
+  border-radius: 28px;
+  display: flex; flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.25), 0 4px 16px rgba(0,0,0,0.15);
+  position: relative;
+}
+.card__image-wrap {
+  width: 100%;
+  height: 180px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.card__gif {
+  width: 130px; height: 130px;
+  object-fit: contain;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  filter: none;
+}
+.card--animals .card__gif { transform: scale(1.2); }
+.card--food .card__gif { transform: scale(1.4); }
+.card--nature .card__gif { transform: scale(1.3); }
+.card__body {
+  width: 100%;
+  background: #fff;
+  padding: 16px 20px 20px;
+  display: flex; flex-direction: column; align-items: center; gap: 4px;
+}
+.card__label {
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase;
+}
+.card__name {
+  font-size: 26px; font-weight: 900;
+  color: #1a1a1a; letter-spacing: 0.01em;
+}
+.card--animals .card__image-wrap { background: #c797b8; }
+.card--animals .card__label { color: #2E7D32; }
+.card--food .card__image-wrap { background: #9ca3b2; }
+.card--food .card__label { color: #F57F17; }
+.card--nature .card__image-wrap { background: #7b8d6f; }
+.card--nature .card__label { color: #1565C0; }
