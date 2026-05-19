@@ -32,3 +32,39 @@ export const loadRemoteWordPack = log({ level: "DEBUG" })(
     return formattedWords;
   }
 );
+
+// тікі помилки з форматом JSON
+export const saveCustomWordPack = log({ level: "ERROR", format: "json" })(
+  async function saveCustomWordPack(packName, wordsArray) {
+    if (!auth.currentUser) return false;
+    
+    const uid = auth.currentUser.uid;
+    const docId = `${uid}_${packName}`;
+    const endpoint = `/custom_packs/${docId}`;
+
+    const firestoreWords = wordsArray.map(item => ({
+      mapValue: {
+        fields: {
+          word: { stringValue: item.word },
+          priority: { integerValue: String(item.priority || 1) }
+        }
+      }
+    }));
+
+    const bodyPayload = {
+      fields: {
+        userId: { stringValue: uid },
+        packName: { stringValue: packName },
+        words: { arrayValue: { values: firestoreWords } }
+      }
+    };
+
+    const response = await apiProxy.fetch(endpoint, {
+      method: "PATCH", 
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(bodyPayload)
+    }, "JWT"); 
+
+    return response.ok;
+  }
+);
