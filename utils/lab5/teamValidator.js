@@ -9,7 +9,8 @@ export async function checkTeamNameValid(teamName, signal = null) {
 
   // 2. шукаємо в колекції "banned_teams" документ, де поле "name" дорівнює введеній назві
   const q = query(
-    collection(db, "banned_teams")
+    collection(db, "banned_teams"), 
+    where("name", "==", teamName.trim().toLowerCase())
   );
 
   try {
