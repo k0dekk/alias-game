@@ -1,11 +1,11 @@
 import { PriorityWordQueue } from "../utils/PriorityWordQueue.js";
 import { getWords } from "../utils/i18n.js";
 
-export function shuffle(arr) {
+export function shuffle(arr) { // Алгоритм Фішера-Йетса
   const a = [...arr];
-  for (let i = a.length - 1; i > 0; i--) {
+  for (let i = a.length - 1; i > 0; i--) { 
     const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]];
+    [a[i], a[j]] = [a[j], a[i]]; // Деструктуризація для обміну елементів місцями
   }
   return a;
 }
