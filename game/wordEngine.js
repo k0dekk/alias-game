@@ -1,4 +1,4 @@
-import { PriorityWordQueue } from "../utils/PriorityWordQueue.js";
+import { PriorityWordQueue } from "../utils/lab4/PriorityWordQueue.js";
 import { getWords } from "../utils/i18n.js";
 
 export function shuffle(arr) { // Алгоритм Фішера-Йетса

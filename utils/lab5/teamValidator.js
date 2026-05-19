@@ -1,5 +1,5 @@
 import { collection, query, where, getDocs } from "firebase/firestore";
-import { db } from "./firebase.js";
+import { db } from "../firebase.js";
 
 export async function checkTeamNameValid(teamName, signal = null) {
   // 1. перевірка на випадок, якщо AbortController спрацював на самому старті

@@ -1,4 +1,4 @@
-import { apiProxy } from "./apiProxy.js";
+import { apiProxy } from "../lab8/apiProxy.js";
 
 export async function saveCustomCategory(uid, categoryId, name, wordsArray) {
   const payload = {
@@ -18,6 +18,25 @@ export async function saveCustomCategory(uid, categoryId, name, wordsArray) {
       }
     }
   };
+
+  const res = await apiProxy.fetch(
+    `/users/${uid}/customCategories?documentId=${categoryId}`,
+    { 
+      method: "POST", 
+      body: JSON.stringify(payload),
+      headers: { "Content-Type": "application/json" }
+    },
+    "JWT"
+  );
+
+  if (!res.ok) {
+    const errorData = await res.json();
+    console.error("Деталі помилки від Firestore:", errorData);
+    throw new Error("Помилка збереження категорії");
+  }
+
+  return res.json();
+}
 
 export async function getCustomCategories(uid) {
   const res = await apiProxy.fetch(`/users/${uid}/customCategories`, {}, "JWT");
@@ -60,23 +79,4 @@ export async function deleteCustomCategory(uid, categoryId) {
     "JWT"
   );
   if (!res.ok) throw new Error("Помилка видалення");
-}
-
-  const res = await apiProxy.fetch(
-    `/users/${uid}/customCategories?documentId=${categoryId}`,
-    { 
-      method: "POST", 
-      body: JSON.stringify(payload),
-      headers: { "Content-Type": "application/json" }
-    },
-    "JWT"
-  );
-
-  if (!res.ok) {
-    const errorData = await res.json();
-    console.error("Деталі помилки від Firestore:", errorData);
-    throw new Error("Помилка збереження категорії");
-  }
-
-  return res.json();
 }

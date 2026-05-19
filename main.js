@@ -1,85 +1,56 @@
-import "./styles/main.css";
-import { showStartScreen }           from "./ui/screens/startScreen.js";
-import { showSettingsScreen }        from "./ui/screens/settingsScreen.js";
+import "./styles/layout/main.css";
+import { showStartScreen } from "./ui/screens/startScreen.js";
+import { showSettingsScreen } from "./ui/screens/settingsScreen.js";
 import { showGameScreen, stopTimer } from "./ui/screens/gameScreen.js";
-import { showGameOverScreen }        from "./ui/screens/resultScreen.js";
-import { createGame }                from "./game/gameState.js";
-import { getLanguage, setLanguage, t, onLanguageChange } from "./utils/i18n.js";
-import { showLoginScreen }           from "./ui/screens/loginScreen.js";
-import { showRegisterScreen }        from "./ui/screens/registerScreen.js";
-import { showProfileScreen }         from "./ui/screens/profileScreen.js";
+import { showGameOverScreen } from "./ui/screens/resultScreen.js";
+import { showAuthScreen } from "./ui/screens/authScreen.js";
+import { showProfileScreen } from "./ui/screens/profileScreen.js";
+import { createGame } from "./game/gameState.js";
+import { setLanguage, t, onLanguageChange, getLanguage } from "./utils/i18n.js";
+import { subscribeAuth } from "./utils/auth.js";
+import { ensureUserProfile, getUserProfile } from "./utils/userProfile.js";
 
 let state = null;
 let currentScreen = "start";
-let isLoggedIn = false;
 
-function showHeaderControls() {
-  const langSel = document.getElementById("languageSelect");
-  const accBtn = document.getElementById("headerAccountBtn");
-  
-  if (langSel) langSel.style.display = "inline-block";
-  if (accBtn) accBtn.style.display = "inline-block";
-}
+let firebaseUser = null;
+let userProfile = null;
 
-function hideHeaderControls() {
-  const langSel = document.getElementById("languageSelect");
-  const accBtn = document.getElementById("headerAccountBtn");
-  
-  if (langSel) langSel.style.display = "none";
-  if (accBtn) accBtn.style.display = "none";
-}
-
-function syncUI() {
+function syncLangChrome() {
   document.title = t("app.title");
-  const sel = document.getElementById("languageSelect");
-  if (sel) sel.value = getLanguage();
+}
+
+function onGameUpdate(meta) {
+  if (meta?.goFinal) {
+    currentScreen = "gameOver";
+  }
+  renderCurrentScreen();
 }
 
 function renderCurrentScreen() {
-  syncUI();
+  syncLangChrome();
 
-  if (currentScreen === "start") {
-    showHeaderControls();
-  } else {
-    hideHeaderControls();
+  if (currentScreen === "settings") {
+    return showSettingsScreen(startGame, goToStart);
   }
 
-  if (currentScreen === "settings")          return showSettingsScreen(startGame);
-  if (currentScreen === "game" && state)     return showGameScreen(state, onRoundEnd);
-  if (currentScreen === "gameOver" && state) return showGameOverScreen(state, restart);
-  
-  if (currentScreen === "login") {
-    return showLoginScreen(
-      () => { isLoggedIn = true; currentScreen = "profile"; renderCurrentScreen(); }, 
-      () => { currentScreen = "register"; renderCurrentScreen(); },                  
-      () => { currentScreen = "start"; renderCurrentScreen(); }                      
-    );
-  }
-  
-  if (currentScreen === "register") {
-    return showRegisterScreen(
-      () => { isLoggedIn = true; currentScreen = "profile"; renderCurrentScreen(); }, 
-      () => { currentScreen = "login"; renderCurrentScreen(); },                     
-      () => { currentScreen = "start"; renderCurrentScreen(); }                      
-    );
+  if (currentScreen === "auth") {
+    return showAuthScreen(goToStart);
   }
 
-  if (currentScreen === "profile") {
-    return showProfileScreen(
-      () => { currentScreen = "start"; renderCurrentScreen(); }, 
-      () => { isLoggedIn = false; currentScreen = "start"; renderCurrentScreen(); } 
-    );
+  if (currentScreen === "profile" && firebaseUser) {
+    return showProfileScreen(firebaseUser, goToStart);
   }
-  showStartScreen(goToSettings);
-}
 
-function handleAccountClick() {
-  if (isLoggedIn) {
-    currentScreen = "profile";
-  } else {
-    currentScreen = "login";
+  if (currentScreen === "gameOver" && state) {
+    return showGameOverScreen(state, restart);
   }
-  renderCurrentScreen();
+
+  if (currentScreen === "game" && state) {
+    return showGameScreen(state, onGameUpdate);
+  }
+
+  showStartScreen(goToSettings, openAuth, openProfile, firebaseUser, userProfile);
 }
 
 function goToSettings() {
@@ -87,15 +58,29 @@ function goToSettings() {
   renderCurrentScreen();
 }
 
-function startGame({ teams, difficulty }) {
-  state = createGame({ teams, difficulty });
-  stopTimer();
-  currentScreen = "game";
+function goToStart() {
+  currentScreen = "start";
   renderCurrentScreen();
 }
 
-function onRoundEnd() {
-  currentScreen = state.phase === "gameOver" ? "gameOver" : "game";
+function openAuth() {
+  currentScreen = "auth";
+  renderCurrentScreen();
+}
+
+function openProfile() {
+  if (!firebaseUser) {
+    openAuth();
+    return;
+  }
+  currentScreen = "profile";
+  renderCurrentScreen();
+}
+
+function startGame(opts) {
+  state = createGame(opts);
+  stopTimer();
+  currentScreen = "game";
   renderCurrentScreen();
 }
 
@@ -103,16 +88,50 @@ function restart() {
   state = null;
   currentScreen = "start";
   renderCurrentScreen();
+  void (async () => {
+    if (firebaseUser?.uid) {
+      try {
+        const p = await getUserProfile(firebaseUser.uid);
+        if (p) userProfile = p;
+      } catch {
+        /* ignore */
+      }
+    }
+    renderCurrentScreen();
+  })();
 }
 
 function init() {
-  document.getElementById("languageSelect")
-    ?.addEventListener("change", (e) => setLanguage(e.target.value));
+  subscribeAuth(async (user) => {
+    firebaseUser = user;
+    if (!user && currentScreen === "profile") {
+      currentScreen = "start";
+    }
+    if (user) {
+      try {
+        userProfile = await ensureUserProfile(user);
+      } catch {
+        userProfile = null;
+      }
+    } else {
+      userProfile = null;
+    }
+    if (currentScreen === "start" || currentScreen === "profile") {
+      renderCurrentScreen();
+    }
+  });
 
-  document.getElementById("headerAccountBtn")
-    ?.addEventListener("click", handleAccountClick);
+  document.documentElement.lang = getLanguage();
 
-  onLanguageChange(() => renderCurrentScreen());
+  document.body.addEventListener("click", (e) => {
+    if (!e.target.closest("#btn-lang")) return;
+    setLanguage(getLanguage() === "uk" ? "en" : "uk");
+  });
+
+  onLanguageChange((lang) => {
+    document.documentElement.lang = lang;
+    renderCurrentScreen();
+  });
 
   renderCurrentScreen();
 }

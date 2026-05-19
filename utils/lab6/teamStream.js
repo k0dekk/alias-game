@@ -1,6 +1,6 @@
-import { ADJECTIVES } from '../locales/adjectives.js';
-import { NOUNS }      from '../locales/nouns.js';
-import { COLORS }     from '../locales/colors.js';
+import { ADJECTIVES } from '../../locales/teams/adjectives.js';
+import { NOUNS }      from '../../locales/teams/nouns.js';
+import { COLORS }     from '../../locales/teams/colors.js';
 
 export const TEAM_SLOTS = 6;
 
