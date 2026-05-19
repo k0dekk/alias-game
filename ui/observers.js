@@ -37,6 +37,19 @@ export function initObservers() {
     });
   }
 
+  const scrollButton = document.querySelector(".button-with-icon"); // Тимчасова заглушка в HTML
+  let unsubscribeButton = null;
+
+    if (scrollButton) {
+        unsubscribeButton = uiEventBus.subscribe("heroScrolled", (data) => {
+        if (data.isHidden) {
+        scrollButton.classList.add("scrolled-state");
+    } else {
+      scrollButton.classList.remove("scrolled-state");
+    }
+  });
+    }
+
   return function destroyObservers() {
     if (unsubscribeHeader) unsubscribeHeader();
   };
