@@ -2,18 +2,21 @@ import { auth } from "./firebase.js";
 
 export class AuthProxy {
   constructor() {
-    // змінні
     this.projectId = import.meta.env.VITE_FIREBASE_PROJECT_ID;
+    this.apiKey = import.meta.env.VITE_FIREBASE_API_KEY;
     this.baseUrl = `https://firestore.googleapis.com/v1/projects/${this.projectId}/databases/(default)/documents`;
   }
 
-  // обгортка для HTTP-запитів
-  async fetch(endpoint, options = {}) {
+  async fetch(endpoint, options = {}, authType = "API_KEY") {
     const config = { ...options };
     config.headers = new Headers(options.headers || {});
     
-    // шлях до Firestore REST API
     let url = `${this.baseUrl}${endpoint}`;
+
+    if (authType === "API_KEY") {
+      const separator = url.includes("?") ? "&" : "?";
+      url = `${url}${separator}key=${this.apiKey}`;
+    }
 
     try {
       const response = await window.fetch(url, config);
