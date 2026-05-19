@@ -52,6 +52,7 @@ export function initObservers() {
 
   return function destroyObservers() {
     if (unsubscribeHeader) unsubscribeHeader();
+    if (unsubscribeButton) unsubscribeButton();
   };
 }
 
