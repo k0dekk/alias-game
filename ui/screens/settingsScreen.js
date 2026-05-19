@@ -5,12 +5,12 @@ import { applyLayout } from "../../ui/layout.js";
 import { settingsScreenMarkup } from "./settingsScreenMarkup.js";
 import { startTyping } from "../../ui/typing.js";
 import { auth } from "../../utils/firebase.js";
-import { getCustomCategories } from "../../utils/lab8/customCategoriesApi.js";
-import { roundRobinGenerator, consumeIteratorWithTimeout } from "../../utils/lab1/generators.js";
-import { asyncSomePromiseAbortable } from "../../utils/lab5/asyncSome.js";
-import { checkTeamNameValid } from "../../utils/lab5/teamValidator.js";
+import { getCustomCategories } from "../../utils/proxy/customCategoriesApi.js";
+import { roundRobinGenerator, consumeIteratorWithTimeout } from "../../utils/generator/generators.js";
+import { asyncSomePromiseAbortable } from "../../utils/asyncSome/asyncSome.js";
+import { checkTeamNameValid } from "../../utils/asyncSome/teamValidator.js";
 
-import { pickInstantConfig } from "../../utils/lab6/teamStream.js";
+import { pickInstantConfig } from "../../utils/stream/teamStream.js";
 
 import "../../styles/components/header.css";
 import "../../styles/base/base.css";

@@ -1,4 +1,4 @@
-import { apiProxy } from "../lab8/apiProxy.js";
+import { apiProxy } from "./apiProxy.js";
 
 export async function saveCustomCategory(uid, categoryId, name, wordsArray) {
   const payload = {

@@ -1,7 +1,7 @@
 import { DIFFICULTIES, CATEGORIES } from "./config.js";
 import { createWordQueue } from "./wordEngine.js";
 import { saveRoundStats } from "../utils/userProfile.js";
-import { log } from "../utils/lab9/logger.js";
+import { log } from "../utils/logger/logger.js";
 
 export const createGame = log({ level: "INFO" })(
   function createGame({

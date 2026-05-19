@@ -12,7 +12,7 @@ import {
   getCustomCategories, 
   saveCustomCategory, 
   deleteCustomCategory 
-} from "../../utils/lab8/customCategoriesApi.js";
+} from "../../utils/proxy/customCategoriesApi.js";
 
 import "../../styles/pages/profile-screen.css";
 

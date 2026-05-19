@@ -3,7 +3,7 @@ import { getStartScreenMarkup } from "./startScreenMarkup.js";
 import { startTyping } from "../../ui/typing.js";
 import { initSnapScroll } from "../../ui/snapscroll.js";
 import { initCardRotator } from "../../ui/cardRotator.js";
-import { initObservers } from "../../ui/observers.js";
+import { initObservers } from "../../ui/observer/observers.js";
 import { applyLayout } from "../../ui/layout.js";
 import { t } from "../../utils/i18n.js";
 
