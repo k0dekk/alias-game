@@ -13,13 +13,13 @@ const LOG_LEVELS = {
 export function log({ level = "INFO", format = "text" } = {}) {
   const currentLevelValue = LOG_LEVELS[level.toUpperCase()] || LOG_LEVELS.INFO;
 
-  // Повертаємо функцію, яка приймає оригінальну функцію для обгортання
+  // повертаємо функцію, яка приймає оригінальну функцію для обгортання
   return function (originalFunction) {
     return function (...args) {
       const functionName = originalFunction.name || "anonymous";
       const timestamp = new Date().toISOString();
 
-      // Допоміжна функція для виводу логів
+      // допоміжна функція для виводу логів
       const printLog = (logLevel, logData) => {
         if (LOG_LEVELS[logLevel] >= currentLevelValue) {
           if (format === "json") {
@@ -30,7 +30,7 @@ export function log({ level = "INFO", format = "text" } = {}) {
         }
       };
 
-      // Логуємо вхідні аргументи (рівень INFO або DEBUG)
+      // логуємо вхідні аргументи (рівень INFO або DEBUG)
       if (currentLevelValue <= LOG_LEVELS.INFO) {
         printLog("INFO", { message: "Функція викликана", args });
       }
@@ -38,9 +38,27 @@ export function log({ level = "INFO", format = "text" } = {}) {
       const start = performance.now();
 
       try {
+        // виконуємо оригінальну функцію
         const result = originalFunction.apply(this, args);
 
-        // синхронна
+        // перевіряємо, чи є вона асинхронною
+        if (result instanceof Promise) {
+          return result
+            .then((res) => {
+              const duration = (performance.now() - start).toFixed(2);
+              if (currentLevelValue <= LOG_LEVELS.DEBUG) {
+                printLog("DEBUG", { message: "Виконано (асинхронно)", durationMs: duration, result: res });
+              }
+              return res;
+            })
+            .catch((error) => {
+              const duration = (performance.now() - start).toFixed(2);
+              printLog("ERROR", { message: "Помилка (асинхронно)", durationMs: duration, error: error.message });
+              throw error;
+            });
+        }
+
+        // якщо функція синхронна
         const duration = (performance.now() - start).toFixed(2);
         if (currentLevelValue <= LOG_LEVELS.DEBUG) {
           printLog("DEBUG", { message: "Виконано (синхронно)", durationMs: duration, result });
@@ -48,14 +66,11 @@ export function log({ level = "INFO", format = "text" } = {}) {
         return result;
 
       } catch (error) {
-        // синхронні помилки
+        // перехоплення синхронних помилок
         const duration = (performance.now() - start).toFixed(2);
         printLog("ERROR", { message: "Критична помилка", durationMs: duration, error: error.message });
         throw error;
       }
-
-      const result = originalFunction.apply(this, args);
-      return result;
     };
   };
 }
