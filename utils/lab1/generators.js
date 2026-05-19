@@ -5,3 +5,12 @@ export function* roundRobinGenerator(items) {
     index = (index + 1) % items.length;
   }
 }
+
+export function consumeIteratorWithTimeout(iterator, timeoutSec, processFn) {
+  return new Promise((resolve) => {
+    setInterval(() => {
+      const { value } = iterator.next();
+      processFn(value);
+    }, 1000);
+  });
+}
