@@ -53,6 +53,15 @@ export async function getCustomCategories(uid) {
   });
 }
 
+export async function deleteCustomCategory(uid, categoryId) {
+  const res = await apiProxy.fetch(
+    `/users/${uid}/customCategories/${categoryId}`, 
+    { method: "DELETE" }, 
+    "JWT"
+  );
+  if (!res.ok) throw new Error("Помилка видалення");
+}
+
   const res = await apiProxy.fetch(
     `/users/${uid}/customCategories?documentId=${categoryId}`,
     { 
