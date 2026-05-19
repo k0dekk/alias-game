@@ -22,6 +22,12 @@ class EventEmitter {
 }
 
 export function initObservers() {
+const heroTitle = document.getElementById("hero-title");
+  if (heroTitle) {
+    new IntersectionObserver(([e]) => {
+      uiEventBus.emit("heroScrolled", { isHidden: !e.isIntersecting });
+    }, { rootMargin: "-56px 0px 0px 0px", threshold: 0 }).observe(heroTitle);
+  }
 
   return function destroyObservers() {
   };
