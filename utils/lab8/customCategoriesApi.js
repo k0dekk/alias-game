@@ -19,7 +19,7 @@ export async function saveCustomCategory(uid, categoryId, name, wordsArray) {
     }
   };
 
-  export async function getCustomCategories(uid) {
+export async function getCustomCategories(uid) {
   const res = await apiProxy.fetch(`/users/${uid}/customCategories`, {}, "JWT");
   if (!res.ok) return [];
   
@@ -28,18 +28,30 @@ export async function saveCustomCategory(uid, categoryId, name, wordsArray) {
 
   return data.documents.map(doc => {
     const id = doc.name.split('/').pop();
-    
     const name = doc.fields?.name?.stringValue || "Без назви";
     const wordsRaw = doc.fields?.words?.arrayValue?.values || [];
+    
+    const words = wordsRaw.map(v => {
+      if (v.mapValue && v.mapValue.fields) {
+        return {
+          word: v.mapValue.fields.word?.stringValue || "",
+          difficulty: v.mapValue.fields.difficulty?.stringValue || "easy"
+        };
+      }
 
-    const words = wordsRaw.map(v => ({
-      word: v.mapValue?.fields?.word?.stringValue || "",
-      difficulty: v.mapValue?.fields?.difficulty?.stringValue || "easy"
-    })).filter(w => w.word.trim().length > 0);
+      if (v.stringValue) {
+        return {
+          word: v.stringValue,
+          difficulty: "easy"
+        };
+      }
+
+      return { word: "", difficulty: "easy" };
+    }).filter(w => w.word.trim().length > 0);
 
     return { id, name, words, isCustom: true };
-   });
-  }
+  });
+}
 
   const res = await apiProxy.fetch(
     `/users/${uid}/customCategories?documentId=${categoryId}`,
