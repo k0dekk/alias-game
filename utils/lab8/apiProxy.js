@@ -16,13 +16,22 @@ export class AuthProxy {
     if (authType === "API_KEY") {
       const separator = url.includes("?") ? "&" : "?";
       url = `${url}${separator}key=${this.apiKey}`;
+    } 
+
+    else if (authType === "JWT") {
+      if (auth.currentUser) {
+        const token = await auth.currentUser.getIdToken();
+        config.headers.append("Authorization", `Bearer ${token}`);
+      } else {
+        console.warn("[API Proxy] cпроба використати JWT без авторизації");
+      }
     }
 
     try {
       const response = await window.fetch(url, config);
       return response;
     } catch (error) {
-      console.error("[API Proxy] Помилка запиту через проксі:", error);
+      console.error("[API Proxy] помилка запиту через проксі:", error);
       throw error;
     }
   }
