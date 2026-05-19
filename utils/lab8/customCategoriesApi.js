@@ -29,5 +29,11 @@ export async function saveCustomCategory(uid, categoryId, name, wordsArray) {
     "JWT"
   );
 
+  if (!res.ok) {
+    const errorData = await res.json();
+    console.error("Деталі помилки від Firestore:", errorData);
+    throw new Error("Помилка збереження категорії");
+  }
+
   return res.json();
 }
