@@ -21,4 +21,10 @@ class EventEmitter {
   }
 }
 
+export function initObservers() {
+
+  return function destroyObservers() {
+  };
+}
+
 export const uiEventBus = new EventEmitter();
