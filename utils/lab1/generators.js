@@ -1,3 +1,8 @@
+/*
+
+Генератор для випадкового вибору категорій слів в модальному вікні на settingsScreen.js
+
+*/
 export function* roundRobinGenerator(items) {
   let index = Math.floor(Math.random() * items.length);
   while (true) {
