@@ -248,6 +248,7 @@ button.game-btn .game-btn__label {
   margin: 8px auto 0;
   width: 200px;
   height: 200px;
+  margin-top: -30px;
 }
 
 .game-ready__ring {
@@ -267,7 +268,7 @@ button.game-btn .game-btn__label {
 
 .game-ready__count-num {
   position: absolute;
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: 900;
   color: var(--settings-text-dark, #2c1a0e);
   text-shadow: 0 2px 12px rgba(255, 255, 255, 0.9);
