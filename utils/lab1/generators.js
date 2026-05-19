@@ -1,5 +1,5 @@
 export function* roundRobinGenerator(items) {
-  let index = 0;
+    let index = Math.floor(Math.random() * items.length);
   while (true) {
     yield items[index];
     index = (index + 1) % items.length;
