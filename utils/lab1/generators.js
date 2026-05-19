@@ -1,5 +1,5 @@
 export function* roundRobinGenerator(items) {
-    let index = Math.floor(Math.random() * items.length);
+  let index = Math.floor(Math.random() * items.length);
   while (true) {
     yield items[index];
     index = (index + 1) % items.length;
@@ -8,9 +8,20 @@ export function* roundRobinGenerator(items) {
 
 export function consumeIteratorWithTimeout(iterator, timeoutSec, processFn) {
   return new Promise((resolve) => {
-    setInterval(() => {
+    const timeoutMs = timeoutSec * 1000;
+    const startTime = Date.now();
+
+    const intervalId = setInterval(() => {
+      const elapsed = Date.now() - startTime;
+
+      if (elapsed >= timeoutMs) {
+        clearInterval(intervalId);
+        resolve();
+        return;
+      }
       const { value } = iterator.next();
+      
       processFn(value);
-    }, 1000);
+    }, 100);
   });
 }
