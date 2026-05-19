@@ -29,6 +29,31 @@ export function log({ level = "INFO", format = "text" } = {}) {
           }
         }
       };
+
+      // Логуємо вхідні аргументи (рівень INFO або DEBUG)
+      if (currentLevelValue <= LOG_LEVELS.INFO) {
+        printLog("INFO", { message: "Функція викликана", args });
+      }
+
+      const start = performance.now();
+
+      try {
+        const result = originalFunction.apply(this, args);
+
+        // синхронна
+        const duration = (performance.now() - start).toFixed(2);
+        if (currentLevelValue <= LOG_LEVELS.DEBUG) {
+          printLog("DEBUG", { message: "Виконано (синхронно)", durationMs: duration, result });
+        }
+        return result;
+
+      } catch (error) {
+        // синхронні помилки
+        const duration = (performance.now() - start).toFixed(2);
+        printLog("ERROR", { message: "Критична помилка", durationMs: duration, error: error.message });
+        throw error;
+      }
+
       const result = originalFunction.apply(this, args);
       return result;
     };
